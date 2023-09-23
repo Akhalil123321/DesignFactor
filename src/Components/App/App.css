@@ -1,0 +1,12 @@
+.html{
+  overflow: hidden;
+}
+body{
+  overflow-x: hidden;
+}
+:root{
+  --mainwidth:85%;
+  --secondarywidth:83%;
+  --maincolor:rgba(96, 96, 96, 1);
+  --secondcolor:aqua
+}

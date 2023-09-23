@@ -1,0 +1,109 @@
+.nav{
+    background-color: var(--maincolor);
+    height: 4rem;
+    /* border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; */
+    display: flex;
+    flex-direction: row;
+}
+/* fa list close -----------------------------------*/
+.fa-icon-close, .fa-icon-open{
+    width: 4rem;
+    height: 3rem;
+    margin: auto 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.fa-icon-close:hover, .fa-icon-open:hover {
+    cursor: pointer;
+}
+.fa-icon-close:hover > .fa-line1, 
+.fa-icon-close:hover > .fa-line2, 
+.fa-icon-close:hover > .fa-line3,
+.fa-icon-open:hover > .fa-line1, 
+.fa-icon-open:hover > .fa-line2, 
+.fa-icon-open:hover > .fa-line3 {
+    background-color: var(--secondcolor);
+    }
+
+.fa-line1, .fa-line2, .fa-line3{
+    background-color: white;
+    height: .25rem;
+    width: 80%;
+    margin: auto 0PX;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation-duration: 1.5s;
+}
+.fa-line1, .fa-line3{
+    animation: faAnimation1 1.5s linear infinite;
+    animation-delay: .8s
+}
+.fa-line2{
+    animation: faAnimation2 2s linear infinite;
+    animation-delay: 1.3s
+}
+
+    @keyframes faAnimation1 {
+        0%, 100%{
+            width: 80%;
+        }
+        50%{
+            width: 40%;
+        }
+    }
+    @keyframes faAnimation2 {
+        0%, 100%{
+            width: 80%;
+        }
+        50%{
+            width: 40%;
+        }
+    }
+.list-close{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    background-color: black;
+    top: -1rem;
+    left: -1rem;
+    border-radius: 50%;
+}
+.circle-close, .circle-open{
+    background-color:transparent;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    left: 0.4rem;
+    background-color: rgba(44, 51, 56, 0.9);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+.circle-close{
+    transform: scale(200);
+}
+/* fa list open ------------------------------------*/
+.circle-open{
+    transform: scale(0);
+}
+/* .fa-line2{
+    display: none;
+}
+.fa-line1, .fa-line3{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.fa-line1{
+    transform: rotate(45deg);
+    width: 80%
+
+}
+.fa-line3{
+    transform: rotate(-45deg);
+    width: 80%
+}
+.fa-line1, .fa-line2, .fa-line3{
+    animation-play-state: paused;
+} */
