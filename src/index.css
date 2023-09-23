@@ -4,10 +4,11 @@
   color: #ffffff;
   font-family: 'Poppins',sans-serif;
 }
-  html{
-    background-color: #ffffff;
-    overflow: overlay;
-    overflow-x: hidden;
+html{
+  background-color: #ffffff;
+  overflow: overlay;
+  overflow-x: hidden;
+  font-size: 1vmax;
   }
   ::-webkit-scrollbar{
     width: 18px;
