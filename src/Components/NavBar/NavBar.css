@@ -5,7 +5,11 @@
     border-bottom-right-radius: 1rem; */
     display: flex;
     flex-direction: row;
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem 0;
 }
+/* Fa Icon ------------------------------------------- */
 /* fa list close -----------------------------------*/
 .fa-icon-close, .fa-icon-open{
     width: 4rem;
@@ -14,35 +18,57 @@
     display: flex;
     flex-direction: column;
     z-index: 1;
+    position: relative;
 }
 .fa-icon-close:hover, .fa-icon-open:hover {
     cursor: pointer;
 }
-.fa-icon-close:hover > .fa-line1, 
-.fa-icon-close:hover > .fa-line2, 
-.fa-icon-close:hover > .fa-line3,
-.fa-icon-open:hover > .fa-line1, 
-.fa-icon-open:hover > .fa-line2, 
-.fa-icon-open:hover > .fa-line3 {
+.fa-icon-close:hover > .fa1-close, 
+.fa-icon-close:hover > .fa2-close, 
+.fa-icon-close:hover > .fa3-close,
+.fa-icon-open:hover > .fa1-close, 
+.fa-icon-open:hover > .fa2-close, 
+.fa-icon-open:hover > .fa3-close
+.fa-icon-close:hover > .fa1-open, 
+.fa-icon-close:hover > .fa2-open, 
+.fa-icon-close:hover > .fa3-open,
+.fa-icon-open:hover > .fa1-open, 
+.fa-icon-open:hover > .fa2-open, 
+.fa-icon-open:hover > .fa3-open {
     background-color: var(--secondcolor);
     }
 
-.fa-line1, .fa-line2, .fa-line3{
+.fa1-close, 
+.fa2-close, 
+.fa3-close, 
+.fa1-open, 
+.fa2-open, 
+.fa3-open{
     background-color: white;
-    height: .26rem;
+    height: .28rem;
     width: 80%;
-    margin: auto 0PX;
+    position: absolute;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     animation-duration: 1.5s;
 }
-.fa-line1, .fa-line3{
+.fa1-close{
     animation: faAnimation1 1.5s linear infinite;
-    animation-delay: .8s
+    animation-delay: .8s;
+    top: 14.2%;
+    transition-duration: 1s;
 }
-.fa-line2{
+.fa2-close{
     animation: faAnimation2 2s linear infinite;
-    animation-delay: 1.3s
+    animation-delay: 1.3s;
+    top: 42.6%;
+    transition-duration: 1s;
+}
+.fa3-close{
+    animation: faAnimation1 1.5s linear infinite;
+    animation-delay: .8s;
+    top: 71%;
+    transition-duration: 1s;
 }
 
     @keyframes faAnimation1 {
@@ -81,31 +107,127 @@
     left: 0.4rem;
     background-color: rgba(44, 51, 56, 0.9);
     transform-origin: center;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out;
 }
 .circle-close{
-    transform: scale(100);
+    transform: scale(0);
 }
 /* fa list open ------------------------------------*/
 .circle-open{
-    transform: scale(0);
+    transform: scale(70);
 }
-/* .fa-line2{
-    display: none;
+.fa2-open{
+    width: 0;
+    top: 42.6%;
+    transition-duration: 1s;
 }
-.fa-line1, .fa-line3{
+.fa1-open, .fa3-open{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.fa-line1{
+.fa1-open{
     transform: rotate(45deg);
-    width: 80%
-
+    width: 70%;
+    top: 50%;
+    transition-duration: 1s;
 }
-.fa-line3{
+.fa3-open{
     transform: rotate(-45deg);
-    width: 80%
+    width: 70%;
+    top: 50%;
+    transition-duration: 1s;
 }
-.fa-line1, .fa-line2, .fa-line3{
+.fa1-open, .fa2-open, .fa3-open{
     animation-play-state: paused;
-} */
+}
+/* Logo --------------------------------------------- */
+.Nav-Logo{
+    margin: auto;
+    height: 100%;
+    width: 10%;
+    position: relative;
+}
+.nav-logo-parts{
+    position: absolute;
+}
+.nav-logo-part1{
+    width: 48%;
+    left: 10%;
+    animation: part1Animation 1s linear;
+}
+.nav-logo-part2{
+    width: 12%;
+    top: 38%;
+    left: 38.5%;
+    animation: part2Animation 1s linear;
+}
+.nav-logo-part3{
+    width: 40%;
+    top: 39.5%;
+    left: 50%;
+    animation: part3Animation 1s linear;
+}
+.nav-logo-part4{
+    width: 40%;
+    top: 61%;
+    left: 39%;
+    animation: part4Animation 1s linear;
+}
+.nav-logo-part5{
+    width: 12%;
+    top: 65%;
+    left: 78%;
+    animation: part5Animation 1.5s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes part1Animation {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes part2Animation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes part3Animation {
+    0%{
+        top: -10rem;
+    }
+    100%{
+        top:39.5%;
+    }
+}
+@keyframes part4Animation {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 40%;
+    }
+}
+@keyframes part5Animation {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+}
+.part5-parent{
+    animation: part5Animation2 2s ease;
+}
+@keyframes part5Animation2 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

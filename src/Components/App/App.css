@@ -7,6 +7,6 @@ body{
 :root{
   --mainwidth:85%;
   --secondarywidth:83%;
-  --maincolor:rgba(96, 96, 96, 1);
-  --secondcolor:aqua
+  --maincolor:rgba(96, 96, 96, 0.5);
+  --secondcolor:#ebb838
 }
