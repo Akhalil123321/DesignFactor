@@ -16,14 +16,14 @@
     box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;
     -webkit-box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;
     -moz-box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset; 
-    padding: 0.5rem;
+    padding: 0.5rem 0;
 }
 /* Fa Icon ------------------------------------------- */
 /* fa list close -----------------------------------*/
 .fa-icon-close, .fa-icon-open{
-    width: 4rem;
+    width: 12%;
     height: 3rem;
-    margin: auto 1rem;
+    margin: auto 1%;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -53,9 +53,9 @@
 .fa1-open, 
 .fa2-open, 
 .fa3-open{
-    background-color: white;
+    background-color: rgb(226,226,225);
     height: .28rem;
-    width: 80%;
+    width: 3.5rem;
     position: absolute;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -82,18 +82,18 @@
 
     @keyframes faAnimation1 {
         0%, 100%{
-            width: 80%;
+            width: 3.5rem;
         }
         50%{
-            width: 40%;
+            width: 2rem;
         }
     }
     @keyframes faAnimation2 {
         0%, 100%{
-            width: 80%;
+            width: 3.5rem;
         }
         50%{
-            width: 40%;
+            width: 2rem;
         }
     }
 .list-close{
@@ -111,9 +111,8 @@
     height: 4rem;
     border-radius: 50%;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    left: 0.4rem;
+    top: 1.7rem;
+    left: 1.5rem;
     background-color: rgba(44, 51, 56, 0.9);
     transform-origin: center;
     transition: transform 0.8s ease-in-out;
@@ -136,13 +135,13 @@
 }
 .fa1-open{
     transform: rotate(45deg);
-    width: 70%;
+    width: 2.8rem;
     top: 50%;
     transition-duration: 1s;
 }
 .fa3-open{
     transform: rotate(-45deg);
-    width: 70%;
+    width: 2.8rem;
     top: 50%;
     transition-duration: 1s;
 }
@@ -155,6 +154,7 @@
     height: 100%;
     width: 10%;
     position: relative;
+    display: flex;
 }
 .nav-logo-parts{
     position: absolute;
@@ -162,81 +162,119 @@
 .nav-logo-part1{
     width: 48%;
     left: 10%;
-    animation: part1Animation 1s linear;
+    animation: part1Animation 1.2s linear;
+}
+.part2-parent{
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    transform: scaleX(1);
+    margin: 1.6rem 0 0 2.4rem;
 }
 .nav-logo-part2{
-    width: 12%;
-    top: 38%;
-    left: 38.5%;
-    animation: part2Animation 1s linear;
+    width: 5.8rem;
+    height: auto;
+    margin: auto;
+    display: block;
+    animation: part2Animation 1.2s linear;
 }
 .nav-logo-part3{
-    width: 40%;
-    top: 39.5%;
-    left: 50%;
-    animation: part3Animation 1s linear;
-}
-.nav-logo-part4{
-    width: 40%;
-    top: 61%;
-    left: 39%;
-    animation: part4Animation 1s linear;
-}
-.nav-logo-part5{
-    width: 12%;
-    top: 65%;
-    left: 78%;
-    animation: part5Animation 1.5s linear infinite;
-    animation-delay: 1s;
+    width: 10%;
+    top: 63.5%;
+    right: 15%;
+    animation: part3Animation 1.8s linear ;
 }
 @keyframes part1Animation {
     0%{
-        transform: scale(0);
+        left:28%;
+    }
+    50%{
+        left: 28%;
     }
     100%{
-        transform: scale(1);
+        left: 5%;
     }
 }
 @keyframes part2Animation {
     0%{
-        opacity: 0;
+        transform: scaleX(0);
+        opacity: .3;
+    }
+    50%{
+        transform: scaleX(0);
+        opacity: .3;
     }
     100%{
+        transform: scaleX(1);
         opacity: 1;
     }
 }
 @keyframes part3Animation {
     0%{
-        top: -10rem;
+        right: 24.2%;
+        transform: scale(1.8);
+    }
+    33.3%{
+        right: 24.2%;
+        transform: scale(1.8);
+    }
+    66.6%{
+        right: 5%;
+        transform: scale(1.8);
     }
     100%{
-        top:39.5%;
-    }
-}
-@keyframes part4Animation {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 40%;
-    }
-}
-@keyframes part5Animation {
-    0%, 100%{
+        right: 15.5%;
         transform: scale(1);
     }
-    50%{
-        transform: scale(0.5);
-    }
 }
-.part5-parent{
-    animation: part5Animation2 2s ease;
+/* .part3-parent{
+    animation: part3Animation2 2s ease;
 }
-@keyframes part5Animation2 {
+@keyframes part3Animation2 {
     0%{
         opacity: 0;
     }
     100%{
         opacity: 1;
     }
+} */
+.nav-logo-part1-close{
+    width: 48%;
+    left: 28%;
+}
+.nav-logo-part2-close{
+    display: none;
+}
+.nav-logo-part3-close{
+    width: 10%;
+    top: 63.5%;
+    right: 24.2%;
+    transform: scale(1.8);
+    animation: part3AnimationClose 1.5s linear infinite;
+    animation-delay: 0.3s;
+}
+@keyframes part3AnimationClose {
+    0%, 100% {
+        top: 63.5%;
+    }
+    25%, 75% {
+        top: 35%;
+    }
+    50%{
+        top: 50%;
+    }
+}
+/* Right Section ---------------------------------------------- */
+.nav-scroll-down > svg, .nav-scroll-up > svg{
+    margin: auto 1rem;
+    width: 13%;
+    fill: rgb(226,226,225);
+    height: 3.5rem;
+    animation-duration: 1.5s;
+}
+.nav-scroll-down > svg:hover, .nav-scroll-up > svg:hover{
+    cursor: pointer;
+    fill: var(--secondcolor);
+    animation-duration: 1.5s;
 }

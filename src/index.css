@@ -9,6 +9,7 @@ html{
   overflow: overlay;
   overflow-x: hidden;
   font-size: 1vmax;
+  background-color: rgb(0, 0, 0);
   }
   ::-webkit-scrollbar{
     width: 18px;
@@ -27,3 +28,5 @@ html{
   ::-webkit-scrollbar-thumb:hover {
     background: #00040F; 
   }
+
+  
