@@ -1,13 +1,22 @@
-.nav{
+/* Navbar properties -------------------------------------------------- */
+.nav-scroll-up, .nav-scroll-down{
     background-color: var(--maincolor);
     height: 5rem;
-    /* border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem; */
+    transition-duration: 0.5s;
     display: flex;
     flex-direction: row;
     position: fixed;
     width: 100%;
     padding: 1.5rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.nav-scroll-down{
+    transition-duration: 0.5s;
+    background-color: var(--thirdcolor);
+    box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;
+    -webkit-box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;
+    -moz-box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset; 
+    padding: 0.5rem;
 }
 /* Fa Icon ------------------------------------------- */
 /* fa list close -----------------------------------*/

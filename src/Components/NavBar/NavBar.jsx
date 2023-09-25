@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { useEffect } from 'react'
 import "./NavBar.css"
 import part1 from "../../Images/Logo/part1.png"
 import part2 from "../../Images/Logo/part2.png"
@@ -7,15 +8,33 @@ import part3 from "../../Images/Logo/part3.png"
 import part4 from "../../Images/Logo/part4.png"
 import part5 from "../../Images/Logo/part5.png"
 const NavBar = () => {
-  const [list, setList] = useState(false)
+  const [list, setList] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const listState = list ? 'fa-icon-open':'fa-icon-close'
   const circleState = list ? 'circle-open' : 'circle-close'
   const fa1State = list ? 'fa1-open' : 'fa1-close'
   const fa2State = list ? 'fa2-open' : 'fa2-close'
   const fa3State = list ? 'fa3-open' : 'fa3-close'
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const scrollState = scrolled ? 'nav-scroll-down' : 'nav-scroll-up'
+
+
   return (
-    <div className='nav'>
+    <div className={scrollState}>
     <div className={listState} onClick={() => setList(!list)}>
       <span className={fa1State}></span>
       <span className={fa2State}></span>
