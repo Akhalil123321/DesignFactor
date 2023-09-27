@@ -1,11 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { FaAngleDown } from "react-icons/fa";
+import { MdLanguage } from "react-icons/md";
+import { BiMessageRoundedDetail } from "react-icons/bi";
+import { FaCouch } from "react-icons/fa";
 import "./NavBar.css"
-import part1 from "../../Images/Logo/part1.png"
-import part2 from "../../Images/Logo/part6.png"
-import part3 from "../../Images/Logo/part5.png"
+import part1 from "../../Images/Logo/part1.png";
+import part2 from "../../Images/Logo/part6.png";
+import part3 from "../../Images/Logo/part5.png";
 const NavBar = () => {
   const [list, setList] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -33,6 +35,10 @@ const NavBar = () => {
   const logoState1 = scrolled ? 'nav-logo-parts nav-logo-part1-close' : 'nav-logo-parts nav-logo-part1'
   const logoState2 = scrolled ? 'nav-logo-part2-close' : 'nav-logo-part2'
   const logoState3 = scrolled ? 'nav-logo-parts nav-logo-part3-close' : 'nav-logo-parts nav-logo-part3'
+  const contactScroll = scrolled ? 'right-container-ch1-down' : 'right-container-ch1'
+  const contactIcon = scrolled ? 'contact-icon-down' : 'contact-icon'
+  const projectsScroll = scrolled ? 'right-container-ch2-down' : 'right-container-ch2'
+  const projectsIcon = scrolled ? 'projects-icon-down' : 'projects-icon'
 
 
   return (
@@ -43,6 +49,12 @@ const NavBar = () => {
         <span className={fa2State}></span>
         <span className={fa3State}></span>
       </div>
+      <div className={projectsScroll}>
+        <span className='right-container-ch2-title'>Projects</span>
+          <div className='right-container-ch21'></div>
+          <div className='right-container-ch22'></div>
+        </div>
+        <FaCouch className={projectsIcon}/>
     </div>
     <div className='Nav-Logo'>
         <img src={part1} alt='' className={logoState1}/>
@@ -50,21 +62,14 @@ const NavBar = () => {
         <div className='part3-parent'><img src={part3} alt='' className={logoState3}/></div>
     </div>
       <div className={circleState}></div>
-      {/* <div className='Nav-right'>
-          <span className='languages'>Language</span>
-          <FaAngleDown className='arrow-icon'/>
-      </div> */}
       <div className='right-container'>
-        <div className='right-container-ch1'>
-        <span className='right-container-ch1-title'>Draft</span>
+        <BiMessageRoundedDetail className={contactIcon}/>
+        <div className={contactScroll}>
+        <span className='right-container-ch1-title'>Contact </span>
           <div className='right-container-ch11'></div>
           <div className='right-container-ch12'></div>
         </div>
-        <div className='right-container-ch2'>
-        <span className='right-container-ch2-title'>Draft</span>
-          <div className='right-container-ch21'></div>
-          <div className='right-container-ch22'></div>
-        </div>
+        <MdLanguage className='languages-icon'/>
       </div>
     </div>
   )

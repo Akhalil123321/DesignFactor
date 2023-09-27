@@ -8,7 +8,8 @@ body{
   --mainwidth:85%;
   --secondarywidth:83%;
   --maincolor:rgba(0, 0, 0, 0.25);
-  --secondcolor:#ebb838;
+  --secondcolor:rgb(233, 182, 53);
   --thirdcolor: rgba(10, 10, 10, 0.8);
+  --forthcolor:rgba(233, 182, 53, 0.6);
   --wightColor:rgb(226,226,225);
 }

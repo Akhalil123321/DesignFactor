@@ -21,9 +21,10 @@
 }
 /* Fa Icon ------------------------------------------- */
 .fa-container{
-    margin: auto 0 auto 1rem;
+    margin: auto 0 auto 2rem;
     width: 23%;
-    height: 3rem;
+    height: 80%;
+    display: flex;
 }
 /* fa list close -----------------------------------*/
 .fa-icon-close, .fa-icon-open{
@@ -263,8 +264,10 @@
 .right-container{
     width: 23%;
     height: 80%;
-    margin: auto 1rem auto 0;
+    margin: auto 2rem auto 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .right-container-ch1{
     width: 45%;
@@ -274,6 +277,7 @@
     border-radius: 2rem;
     display: flex;
     justify-content: space-between;
+    margin-left: 0;
 }
 .right-container-ch2{
     width: 45%;
@@ -283,11 +287,12 @@
     border-radius: 2rem;
     display: flex;
     justify-content: space-between;
+    margin-right: 0;
 }
 .right-container-ch11, .right-container-ch21{
     width: 50%;
     height: 100%;
-    background-color: var(--secondcolor);
+    background-color: var(--forthcolor);
     margin-left: 0;
     border-bottom-left-radius: 2rem;
     border-top-left-radius: 2rem;
@@ -297,7 +302,7 @@
     width: 50%;
     height: 100%;
     margin-right: 0;
-    background-color: var(--secondcolor);
+    background-color: var(--forthcolor);
     border-bottom-right-radius: 2rem;
     border-top-right-radius: 2rem;
     transition-duration: 1s;
@@ -326,12 +331,71 @@
     background-color: transparent;
     border-radius: 2rem;
     position: absolute;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
 }
-
-
-
-
-
+.right-container-ch1-title:hover, .right-container-ch2-title:hover {
+    color: var(--secondcolor);
+    transition-duration: 1s;
+}
+/* Languages Icon ------------------------------------- */
+.languages-icon{
+    fill: var(--wightColor);
+    width: 2.8rem;
+    height: 2.8rem;
+    transition-duration: 1s;
+}
+.languages-icon:hover{
+    animation: ballRotate 2s linear infinite;
+    fill: var(--secondcolor);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+@keyframes ballRotate {
+    0%, 100% {
+        transform: rotate(160deg);
+    }
+    25%, 75% {
+        transform: rotate(200deg);
+    }
+    50%{
+        transform: rotate(380deg);
+    }
+}
+.right-container-ch1-down{
+    display: none;
+}
+.contact-icon{
+    display: none;
+}
+.contact-icon-down{
+    width: 2.9rem;
+    height: 2.9rem;
+    margin: auto auto auto 3.5rem;
+    fill: var(--wightColor);
+}
+.contact-icon-down:hover{
+    fill: var(--secondcolor);
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.right-container-ch2-down{
+    display: none;
+}
+.projects-icon{
+    display: none;
+}
+.projects-icon-down{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto 3.5rem auto auto;
+    fill: var(--wightColor);
+}
+.projects-icon-down:hover{
+    fill: var(--secondcolor);
+    cursor: pointer;
+    transition-duration: 1s;
+}
 /* .Nav-right{
     width: 6%;
     margin: auto 1rem;
@@ -340,11 +404,9 @@
     justify-content: center;
     align-items: center;
     gap: .2rem;
-    font-family: "Lucida Console", "Courier New", monospace;
 }
 .languages {
     color: var(--wightColor);
-    font-family: "Lucida Console", "Courier New", monospace;
 }
 .arrow-icon{
     width: .7rem;
