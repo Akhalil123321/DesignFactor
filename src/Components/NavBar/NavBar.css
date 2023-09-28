@@ -261,7 +261,7 @@
     }
 }
 /* Right Section ---------------------------------------------- */
-.right-container{
+/*.right-container{
     width: 23%;
     height: 80%;
     margin: auto 2rem auto 0;
@@ -337,7 +337,7 @@
 .right-container-ch1-title:hover, .right-container-ch2-title:hover {
     color: var(--secondcolor);
     transition-duration: 1s;
-}
+}*/
 /* Languages Icon ------------------------------------- */
 .languages-icon{
     fill: var(--wightColor);
@@ -362,12 +362,12 @@
         transform: rotate(380deg);
     }
 }
-.right-container-ch1-down{
+/*.right-container-ch1-down{
     display: none;
 }
 .contact-icon{
     display: none;
-}
+}*/
 .contact-icon-down{
     width: 2.9rem;
     height: 2.9rem;
@@ -379,12 +379,12 @@
     cursor: pointer;
     transition-duration: 1s;
 }
-.right-container-ch2-down{
+/*.right-container-ch2-down{
     display: none;
-}
-.projects-icon{
+}*/
+/*.projects-icon{
     display: none;
-}
+}*/
 .projects-icon-down{
     width: 2.5rem;
     height: 2.5rem;
