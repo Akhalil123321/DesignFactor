@@ -232,6 +232,7 @@
     100%{
         right: 15.5%;
         transform: scale(1);
+        top: 66%;
     }
 }
 .nav-logo-part1-close{
