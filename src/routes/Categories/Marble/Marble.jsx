@@ -4,7 +4,7 @@ import "./Marble.css"
 const Marble = () => {
   return (
     <div className='str-page'>
-      <h1>UNDER DESIGNING !!</h1>
+      <h1>MARBLE PAGE UNDER DESIGNING !!</h1>
     </div>
   )
 }

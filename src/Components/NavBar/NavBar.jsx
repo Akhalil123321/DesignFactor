@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MdLanguage } from "react-icons/md";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import { FaCouch } from "react-icons/fa";
@@ -13,6 +13,7 @@ import { FaToilet } from "react-icons/fa";
 import { GiTheaterCurtains } from "react-icons/gi";
 import { GiMarbles } from "react-icons/gi";
 import { BsBuildings } from "react-icons/bs";
+import { GrHomeRounded } from "react-icons/gr";
 import "./NavBar.css"
 import part1 from "../../Images/Logo/part1.png";
 import part2 from "../../Images/Logo/part6.png";
@@ -24,6 +25,7 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [Language, setLanguage] = useState(false);
   const [LanguageClicked, setLanguageClicked] = useState(false);
+  const [homePage, setHomePage] = useState(false);
 
   const listState = list ? 'fa-icon-open':'fa-icon-close'
   const listTextState1 = list ? 'fa-text-o':'fa-text'
@@ -42,6 +44,7 @@ const NavBar = () => {
   const blurFilter = categories? 'blur-filter' : 'blur-filter-o'
   const LanguageState1 = Language? 'english-language-o' : 'english-language'
   const LanguageState2 = Language? 'arabic-language-o' : 'arabic-language'
+  const homePageState = homePage ? 'home-page-cont-o' : 'home-page-cont'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +69,19 @@ const NavBar = () => {
   const logoState1 = scrolled ? 'nav-logo-parts nav-logo-part1-close' : 'nav-logo-parts nav-logo-part1'
   const logoState2 = scrolled ? 'nav-logo-part2-close' : 'nav-logo-part2'
   const logoState3 = scrolled ? 'nav-logo-parts nav-logo-part3-close' : 'nav-logo-parts nav-logo-part3'
+  const homeButtonScroll = scrolled ? 'home-page-cont-cont-down' : 'home-page-cont-cont'
 
+  const location = useLocation();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (location.pathname === '/Main') {
+      setHomePage(false);
+    } else if (location.pathname === '/') {
+      setHomePage(false);
+    } else {
+      setHomePage(true);
+    }
+    },);
   return (
     <div className={scrollState}>
     <div className='fa-container'>
@@ -80,31 +95,31 @@ const NavBar = () => {
         <div className='categories-icon-cont'>
         <div className={blurFilter} onClick={() =>setCategories(false)}></div>
         <div className={categoriesCircle}>
-          <Link to="/Furniture"><div className={`furniture-box ${catCircleAll}`} onClick={() => setCategories(false)}><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
-          <Link to="/Appliances"><div className={`Appliances-box ${catCircleAll}`} onClick={() => setCategories(false)}><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
-          <Link to="/ceramics"><div className={`Ceramics-box ${catCircleAll}`} onClick={() => setCategories(false)}><FaBorderAll className='cat-icon'/><span className='cat-text'>Ceramics</span></div></Link>
-          <Link to="/Sanitary"><div className={`Sanitary-box ${catCircleAll}`} onClick={() => setCategories(false)}><FaToilet className='cat-icon'/><span className='cat-text'>Sanitary</span></div></Link>
-          <Link to="/Sockets"><div className={`Sockets-box ${catCircleAll}`} onClick={() => setCategories(false)}><GiElectricalSocket className='cat-icon'/><span className='cat-text'>Sockets</span></div></Link>
-          <Link to="/Gym"><div className={`GYM-box ${catCircleAll}`} onClick={() => setCategories(false)}><CgGym className='cat-icon'/><span className='cat-text'>GYM</span></div></Link>
-          <Link to="/Doors"><div className={`Doors-box ${catCircleAll}`} onClick={() => setCategories(false)}><BsDoorOpenFill className='cat-icon'/><span className='cat-text'>Doors</span></div></Link>
-          <Link to="/Fitout"><div className={`Fit-out-box ${catCircleAll}`} onClick={() => setCategories(false)}><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
-          <Link to="/Furniture"><div className={`Marble-box ${catCircleAll}`} onClick={() => setCategories(false)}><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
-          <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll}`} onClick={() => setCategories(false)}><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
+          <Link to="/Furniture"><div className={`furniture-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
+          <Link to="/Appliances"><div className={`Appliances-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
+          <Link to="/ceramics"><div className={`Ceramics-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><FaBorderAll className='cat-icon'/><span className='cat-text'>Ceramics</span></div></Link>
+          <Link to="/Sanitary"><div className={`Sanitary-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><FaToilet className='cat-icon'/><span className='cat-text'>Sanitary</span></div></Link>
+          <Link to="/Sockets"><div className={`Sockets-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiElectricalSocket className='cat-icon'/><span className='cat-text'>Sockets</span></div></Link>
+          <Link to="/Gym"><div className={`GYM-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><CgGym className='cat-icon'/><span className='cat-text'>GYM</span></div></Link>
+          <Link to="/Doors"><div className={`Doors-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><BsDoorOpenFill className='cat-icon'/><span className='cat-text'>Doors</span></div></Link>
+          <Link to="/Fitout"><div className={`Fit-out-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
+          <Link to="/Furniture"><div className={`Marble-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
+          <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
         </div>
           <div className= 'categories-icon' onClick={() => setCategories(!categories)}>
             <div className={categoriesClose1}></div>
             <div className={categoriesClose2}></div>
-            <div alt='Furniture' className={`categories-icon-1 ${categoriesAll}`}></div>
-            <div alt='Appliances' className={`categories-icon-2 ${categoriesAll}`}></div>
-            <div alt='Ceramics' className={`categories-icon-3 ${categoriesAll}`}></div>
-            <div alt='Sanitary' className={`categories-icon-4 ${categoriesAll}`}></div>
+            <div className={`categories-icon-1 ${categoriesAll}`}></div>
+            <div className={`categories-icon-2 ${categoriesAll}`}></div>
+            <div className={`categories-icon-3 ${categoriesAll}`}></div>
+            <div className={`categories-icon-4 ${categoriesAll}`}></div>
         </div>
           <span className={categoriesText}>Categories</span>
           <span className={categoriesClose}>Close</span>
         </div>
     </div>
-    <Link to="/Main-en" className='nav-logo-cont' onClick={() => setCategories(false)}>
-    <span class="go-main-text">Main Page</span>
+    <Link to="/Main" className='nav-logo-cont' onClick={() => setCategories(false)}>
+    <span class="go-main-text">Home Page</span>
       <div className='Nav-Logo' >
           <img src={part1} alt='' className={logoState1}/>
           <div className='part2-parent'><img src={part2} alt='' className={logoState2}/></div>
@@ -120,9 +135,15 @@ const NavBar = () => {
         <div className='languages-icon-cont'>
           <MdLanguage className={`languages-icon ${LanguageClicked ? 'language-clicked' : ''}`} onClick={() =>{setCategories(false); setLanguage(!Language); languageHandleClick()}}/>
           <span className={LanguageState1}>English</span>
-          <span className={LanguageState2}>Arabic</span>
+          <span className={LanguageState2}>العربية</span>
         </div>
       </div>
+      <Link to="/Main" className={homeButtonScroll}>
+        <div className={homePageState}>
+          <GrHomeRounded className='home-page-icon'/>
+          <span className='home-page-text'>Home Page</span>
+        </div>
+      </Link>
     </div>
   )
 }

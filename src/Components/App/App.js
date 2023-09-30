@@ -1,10 +1,10 @@
 import './App.css';
-import MainEn from '../../routes/MainEn';
+import Main from '../../routes/Main';
 
 function App() {
   return (
     <>
-      <MainEn/>
+      <Main/>
     </>
   );
 }

@@ -8,8 +8,7 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './Components/App/App';
-import MainEn from './routes/MainEn';
-import MainAr from './routes/MainAr';
+import Main from './routes/Main';
 import Appliances from './routes/Categories/Appliances/Appliances';
 import Ceramics from './routes/Categories/Ceramics/Ceramics'
 import Curtains from './routes/Categories/Curtains/Curtains'
@@ -28,8 +27,7 @@ root.render(
     <NavBar/>
       <Routes>
         <Route path="/" element={<App/>} />
-        <Route path="Main-en" element={<MainEn/>} />
-        <Route path="Main-ar" element={<MainAr/>} />
+        <Route path="Main" element={<Main/>} />
         <Route path="ceramics" element={<Ceramics/>} />
         <Route path="Appliances" element={<Appliances/>} />
         <Route path="Curtains" element={<Curtains/>} />

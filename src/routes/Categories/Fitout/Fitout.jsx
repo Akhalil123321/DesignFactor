@@ -4,7 +4,7 @@ import "./Fitout.css"
 const Fitout = () => {
   return (
     <div className='str-page'>
-      <h1>UNDER DESIGNING !!</h1>
+      <h1>FITOUT PAGE UNDER DESIGNING !!</h1>
     </div>
   )
 }

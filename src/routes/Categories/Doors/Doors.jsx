@@ -4,7 +4,7 @@ import './Doors.css'
 const Doors = () => {
   return (
     <div className='str-page'>
-      <h1>UNDER DESIGNING !!</h1>
+      <h1>DOORS PAGE UNDER DESIGNING !!</h1>
     </div>
   )
 }

@@ -29,6 +29,7 @@
 .fa-text{
     position: absolute;
     bottom: -1rem;
+    left: .5rem;
     display: flex;
     font-family: 'Trebuchet MS', sans-serif;
     color: var(--wightColor);
@@ -208,6 +209,7 @@
     transition:opacity 3s;
     visibility:hidden;
     transition-duration: 1s;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 .nav-logo-cont .go-main-text ::after{
     position:absolute;
@@ -348,20 +350,22 @@
     margin: auto 0 auto 3rem;
 }
 .english-language{
-    display: flex;
+    display: none;
     font-family: 'Trebuchet MS', sans-serif;
     color: var(--wightColor);
 }
 .arabic-language{
     font-family: 'Trebuchet MS', sans-serif;
     color: var(--wightColor);
-    display: none;
+    display: flex;
 }
 .english-language-o{
-    display: none;
+    display: flex;
+    color: var(--wightColor);
 }
 .arabic-language-o{
-    display: flex;
+    display: none;
+    color: var(--wightColor);
 }
 .languages-icon{
     fill: var(--wightColor);
@@ -468,7 +472,8 @@
     border-radius: .1rem;
     box-shadow: 0 0 0 .25rem var(--wightColor);
     position: absolute;
-    transition-duration: 1s;
+    transition-duration: .5s;
+    transition-delay: .3s;
 }
 .categories-all-o{
     width: 0;
@@ -594,15 +599,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1);
+    /* box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1);
     -webkit-box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1);
-    -moz-box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1);
+    -moz-box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1); */
 }
 .cat-circle-all{
     border-radius: .1rem;
     width: .5rem;
     height: .5rem;
-    transition-duration: 1s;
+    transition-duration: .5s;
     border: .3rem solid var(--secondcolor);
 }
 .furniture-box{
@@ -649,6 +654,7 @@
     width: 2rem;
     height: 2rem;
     fill: var(--wightColor);
+    color: var(--wightColor);
 }
 .cat-text{
     font-size: .75rem;
@@ -681,4 +687,45 @@
     align-items: center;
     color: white;
     font-size: 20px;
+}
+/* Home Page button --------------------------------------------- */
+.home-page-cont-cont, .home-page-cont-cont-down{
+    position: absolute;
+    top: 7.6rem;
+    left: 0;
+    transition-duration: 0.5s;
+}
+.home-page-cont-cont-down{
+    top: 6.1rem;
+}
+.home-page-cont-o, .home-page-cont{
+    position: fixed;
+    width: 15rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 1rem;
+    z-index: -1;
+    background-color: var(--maincolor);
+    gap: .4rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+    transition-duration: 1s;
+}
+.home-page-cont{
+    height: 0;
+    transition-duration: 1s;
+}
+.home-page-cont:hover, .home-page-cont-o:hover{
+    background-color: var(--thirdcolor);
+    cursor: pointer;
+}
+.home-page-text{
+    color: var(--wightColor);
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.home-page-icon{
+    fill: var(--wightColor);
 }
