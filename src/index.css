@@ -28,4 +28,11 @@ html{
   ::-webkit-scrollbar-thumb:hover {
     background: #00040F; 
   }
-
+.str-page{
+  width: 100vw;
+  height: 100vh;
+  background-color: #514f4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

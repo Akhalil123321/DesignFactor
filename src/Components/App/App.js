@@ -1,14 +1,10 @@
 import './App.css';
-import NavBar from '../NavBar/NavBar.jsx';
-import VideoBackground from '../VideoBackground/VideoBackground';
-import Hero from '../Hero/Hero';
+import MainEn from '../../routes/MainEn';
 
 function App() {
   return (
     <>
-      <NavBar/>
-      <VideoBackground/>
-      <Hero/>
+      <MainEn/>
     </>
   );
 }
