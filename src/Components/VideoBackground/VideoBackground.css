@@ -14,6 +14,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    overflow: hidden;
 }
 .video-Shadow1{
     background-color: var(--Backgroundcolor);
@@ -24,6 +25,7 @@
     box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
     -webkit-box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
     -moz-box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
+    overflow: hidden;
 }
 .video-Shadow2{
     background-color: var(--Backgroundcolor);
@@ -34,4 +36,5 @@
     box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
     -webkit-box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
     -moz-box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
+    overflow: hidden;
 }

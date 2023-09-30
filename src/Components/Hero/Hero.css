@@ -1,5 +1,6 @@
 .hero{
     padding: 2em 5rem 2rem 5rem;
+    overflow: hidden;
 }
 .hero-about-us{
     width: 80%;
