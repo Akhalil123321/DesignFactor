@@ -5,7 +5,7 @@
     margin: auto;
     border-radius: 3rem;
     position: absolute;
-    top: 38rem;
+    top: 83vh;
     left: calc((100% - 85%)/2);
     z-index: -1;
     box-shadow: 0px 0px 32px 0px rgba(255,255,255,.2);

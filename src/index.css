@@ -49,9 +49,24 @@ html{
   color: var(--secondcolor);
   text-shadow: 1px 0 var(--secondcolor);
   font-size: 1.2rem;
+  width: 80%;
 }
 .large{
   font-size: 3.5rem;
   color: var(--wightColor);
   text-shadow: 1px 0 var(--wightColor);
+  width: 80%;
+  margin-left: 12rem;
+}
+.main-title-cont {
+  width: 80%;
+  margin-left: 7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: .5rem;
+}
+.point {
+  width: 1.2rem;
 }

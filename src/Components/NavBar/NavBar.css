@@ -13,11 +13,12 @@
 }
 .nav-scroll-down{
     transition-duration: 0.5s;
-    background-color: var(--thirdcolor);
-    box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;
+    background-color: var(--Backgroundcolor);
+    /* box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;
     -webkit-box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;
-    -moz-box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset; 
+    -moz-box-shadow: -3px -200px 74px -165px rgba(255,255,255,0.1) inset;  */
     padding: 0.6rem 0 1rem 0;
+    z-index: 1;
 }
 /* Fa Icon ------------------------------------------- */
 .fa-container{
@@ -472,13 +473,13 @@
     border-radius: .1rem;
     box-shadow: 0 0 0 .25rem var(--wightColor);
     position: absolute;
-    transition-duration: .5s;
-    transition-delay: .3s;
+    transition-duration: .3s;
+    transition-delay: .2s;
 }
 .categories-all-o{
     width: 0;
     height: 0;
-    transition-duration: 1s;
+    transition-duration: .5s;
     box-shadow:none
 }
 .categories-icon-1{
@@ -567,13 +568,13 @@
     z-index: -1;
     top: -7rem;
     transform: scale(0);
-    transition-duration: 1s;
+    transition-duration: .5s;
     opacity: 0;
 }
 .categories-icon-circle-o{
     transform: scale(1);
     top: 8rem;
-    animation: categoriesCircleOpen 1s linear;
+    animation: categoriesCircleOpen .5s linear;
     opacity: 1;
 }
 @keyframes categoriesCircleOpen {
@@ -594,7 +595,7 @@
     position: absolute;
     border-radius: 1rem;
     border: .3rem solid var(--wightColor);
-    transition-duration: 1s;
+    transition-duration: .5s;
     display: flex;
     align-items: center;
     justify-content: center;
