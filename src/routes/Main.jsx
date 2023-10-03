@@ -5,6 +5,7 @@ import Hero from "../Components/Hero/Hero"
 import Projects from "../Components/Projects/Projects"
 import ContactUs from "../Components/ContactUs/ContactUs"
 import Tail from "../Components/Tail/Tail"
+import Categories from "../Components/Categories/Categories"
 
 const MainEn = () => {
     return (
@@ -12,6 +13,7 @@ const MainEn = () => {
             <VideoBackground/>
             <FilterBar/>
             <Hero/>
+            <Categories/>
             <Projects/>
             <ContactUs/>
             <Tail/>

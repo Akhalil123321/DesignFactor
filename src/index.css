@@ -11,13 +11,13 @@ html{
   background-color: var(--Backgroundcolor);
   }
   ::-webkit-scrollbar{
-    width: 18px;
+    width: 1rem;
     border-radius: 10px;
     background-color: transparent;
-    display: none;
+    display: unset;
   }
   ::-webkit-scrollbar-track {
-    display: none;
+    display: unset;
   }
   ::-webkit-scrollbar-thumb {
     background: rgba(0,4,15,.8); 

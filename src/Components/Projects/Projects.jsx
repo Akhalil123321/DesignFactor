@@ -4,7 +4,7 @@ import './projects.css'
 
 const Projects = () => {
 	return (
-		<div className='projects'>
+			<div className='projects'>
 				<div className='main-title-cont main-title small'>
 				<img src={point} alt='' className='point'/> 
 				<span>DISCOVER US</span>
