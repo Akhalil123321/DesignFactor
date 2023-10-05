@@ -1,9 +1,10 @@
 import React from 'react'
+import {SwiperSlide } from 'swiper/react';
 import './Category.css'
 
 const Category = (props) => {
   return (
-    <div className='category-card'></div>
+    <SwiperSlide className='category-card'></SwiperSlide>
   )
 }
 
