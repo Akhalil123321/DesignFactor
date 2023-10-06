@@ -5,7 +5,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 // import CategoriesData from '../../Data/CategoriesData'
 // import Category from '../../Sources/Category/Category'
-import catImage from '../../Images/Categories/Furniture.png'
+import Furnitures from '../../Images/Categories/Furnitures/Furnitures.jpg'
+import Appliances from '../../Images/Categories/Appliances/Appliances.png'
+import Doors from '../../Images/Categories/Doors/Doors.jpg'
+import electricSocket from '../../Images/Categories/electricSocket/electricSocket.jpg'
+import marbleImg from '../../Images/Categories/Marble/Marble.jpg'
+import GymImg from '../../Images/Categories/GYM/GYM.jpg'
+import fitOutImg from '../../Images/Categories/Fit-out/Fit-out.jpg'
+import ceramicsImg from '../../Images/Categories/Ceramics/Ceramics.jpg'
+import SanitaryImg from '../../Images/Categories/Sanitary/Sanitary.jpg'
+import CurtainsImg from '../../Images/Categories/Curtains/Curtain.jpg'
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -49,25 +58,64 @@ const Categories = () => {
 					className="swiper_container"
 				>
 				<SwiperSlide>
-					<img src={catImage} alt="slide_image" />
+					<div className='categories-img-cont'>
+						<img src={Furnitures} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={catImage} alt="slide_image" />
+					<div className='categories-img-cont'>
+						<img src={Appliances} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={catImage} alt="slide_image" />
+					<div className='categories-img-cont'>
+						<img src={Doors} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={catImage} alt="slide_image" />
+					<div className='categories-img-cont'>
+						<img src={electricSocket} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={catImage} alt="slide_image" />
+					<div className='categories-img-cont'>
+						<img src={marbleImg} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={catImage} alt="slide_image" />
+					<div className='categories-img-cont'>
+						<img src={GymImg} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src={catImage} alt="slide_image" />
+					<div className='categories-img-cont'>
+						<img src={fitOutImg} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div className='categories-img-cont'>
+						<img src={ceramicsImg} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div className='categories-img-cont'>
+						<img src={SanitaryImg} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div className='categories-img-cont'>
+						<img src={CurtainsImg} alt="slide_image" className='categories-img'/>
+						<div className='categories-img-shadow'></div>
+					</div>
 				</SwiperSlide>
 				<div className="slider-controler">
 					<div className="swiper-button-prev slider-arrow-lift"></div>
