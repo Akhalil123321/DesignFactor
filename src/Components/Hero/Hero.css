@@ -104,17 +104,16 @@
     } 
 } 
 .small-img-360-shadow{
-    width: 1%;
-    height: 1%;
-    background-color: black;
+    width: 10%;
+    height: 10%;
+    background-color: rgb(0, 0, 0, .2);
     position: absolute;
     border-radius: 50%;
-    z-index: .2;
-    bottom: -1rem;
+    bottom: -3rem;
     transform: rotateX(80deg);
-    box-shadow: 0px 0px 247px 80px rgba(0,0,0,0.85);
-    -webkit-box-shadow: 0px 0px 247px 80px rgba(0,0,0,0.85);
-    -moz-box-shadow: 0px 0px 247px 80px rgba(0,0,0,0.85);
+    box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.8);
 }
 .large-img-360{
     width: 100%;

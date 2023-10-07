@@ -15,11 +15,12 @@
 .tail-container-det{
     margin-top: 4rem;
     height: 80%;
-    border: 2px solid white;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 2rem;
+
 }
 .tail-container-det1{
     flex: 1.4;
@@ -42,4 +43,24 @@
     color: var(--wightColor);
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
+}
+.tail-container-det-title{
+    color: rgb(168, 168, 168);
+    font-weight: 700;
+    font-size: 2rem;
+}
+.tail-container-det-dis{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.tail-container-det-dis-text{
+    color: var(--textColor);
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tail-container-det-dis-text:hover{
+    color: rgba(143, 143, 143,1);
+    cursor: pointer;
 }

@@ -1,6 +1,5 @@
 .projects{
     padding: 2em 5rem 2rem 5rem;
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -15,18 +14,19 @@
 .projects-card{
     width: 45%;
     height: 40rem;
-    border: 4px solid white;
     color: white;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .projects-card:hover{
     cursor: pointer;
-    transform: rotateX(10deg);
+    transform: scale(1.05);
     transition: transform 0.5s ease;
     transform-style: preserve-3d;
+    transition-duration: 1s;
 }
 .projects-card-1{
     border-top-right-radius: 10rem;
@@ -37,8 +37,14 @@
 }
 .projects-card-3{
     border-top-right-radius: 10rem;
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 .projects-card-4{
     border-top-right-radius: 10rem;
+    margin-top: 4rem;
+}
+.projects-card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

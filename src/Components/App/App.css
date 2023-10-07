@@ -17,4 +17,6 @@ body{
   --Backgroundcolor: rgb(44,51,57);
   --TailColor: rgb(38, 45, 50);
   --copyRight: rgb(34, 40, 44);
+  --thirdTitle: rgba(44,51,57,.7);
+  --textColor: rgba(143, 143, 143,.7);
 }
