@@ -1,5 +1,6 @@
 /* eslint-disable eqeqeq */
 import {React} from 'react'
+import { Link } from "react-router-dom";
 import point from "../../Images/Logo/part5.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
@@ -60,61 +61,81 @@ const Categories = () => {
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={Furnitures} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Furniture" className='categories-img-shadow'>
+							<p className='categories-img-text'>FURNITURES</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={Appliances} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Appliances" className='categories-img-shadow'>
+							<p className='categories-img-text'>APPLIANCES</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={Doors} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Doors" className='categories-img-shadow'>
+							<p className='categories-img-text'>DOORS</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={electricSocket} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Sockets" className='categories-img-shadow'>
+							<p className='categories-img-text'>ELECTRIC SOCKETS</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={marbleImg} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Marble" className='categories-img-shadow'>
+							<p className='categories-img-text'>MARBLE</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={GymImg} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Gym" className='categories-img-shadow'>
+							<p className='categories-img-text'>GYM</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={fitOutImg} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Fitout" className='categories-img-shadow'>
+							<p className='categories-img-text'>FIT-OUT</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={ceramicsImg} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/ceramics" className='categories-img-shadow'>
+							<p className='categories-img-text'>CERAMICS</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={SanitaryImg} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Sanitary" className='categories-img-shadow'>
+							<p className='categories-img-text'>SANITARY</p>
+						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='categories-img-cont'>
 						<img src={CurtainsImg} alt="slide_image" className='categories-img'/>
-						<div className='categories-img-shadow'></div>
+						<Link to="/Curtains" className='categories-img-shadow'>
+							<p className='categories-img-text'>CURTAINS</p>	
+						</Link>
 					</div>
 				</SwiperSlide>
 				<div className="slider-controler">

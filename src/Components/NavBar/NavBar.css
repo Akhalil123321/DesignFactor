@@ -316,7 +316,7 @@
 .nav-logo-part3-close{
     width: 9%;
     top: 63.5%;
-    right: 24.2%;
+    right: 24.8%;
     transform: scale(1.8);
     animation: part3AnimationClose 1.5s linear infinite;
     animation-delay: 0.3s;
@@ -326,7 +326,7 @@
         top: 63.5%;
     }
     25%, 75% {
-        top: 35%;
+        top: 37%;
     }
     50%{
         top: 50%;

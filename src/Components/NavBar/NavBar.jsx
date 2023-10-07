@@ -103,7 +103,7 @@ const NavBar = () => {
           <Link to="/Gym"><div className={`GYM-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><CgGym className='cat-icon'/><span className='cat-text'>GYM</span></div></Link>
           <Link to="/Doors"><div className={`Doors-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><BsDoorOpenFill className='cat-icon'/><span className='cat-text'>Doors</span></div></Link>
           <Link to="/Fitout"><div className={`Fit-out-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
-          <Link to="/Furniture"><div className={`Marble-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
+          <Link to="/Marble"><div className={`Marble-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
           <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
         </div>
           <div className= 'categories-icon' onClick={() => setCategories(!categories)}>
