@@ -561,95 +561,63 @@
     display: flex;
 }
 .categories-icon-circle, .categories-icon-circle-o{
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
+    width: 100%;
+    height: 0;
     position: fixed;
-    z-index: -1;
-    top: -7rem;
-    transform: scale(0);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top:7.65rem;
+    left: 0;
     transition-duration: .5s;
-    opacity: 0;
+    overflow: hidden;
+    gap: 2.5rem;
 }
 .categories-icon-circle-o{
-    transform: scale(1);
-    top: 8rem;
+    height: 6.5rem;
     animation: categoriesCircleOpen .5s linear;
-    opacity: 1;
 }
-@keyframes categoriesCircleOpen {
-    0%{
-        transform: scale(0);
-        top: -7rem;
-        opacity: 0;
-    }
-    100%{
-        top: 8rem;
-        transform: scale(1);
-        opacity: 1;
-    }
+.categories-icon-circle-o-down{
+    top:6.1rem;
+    background-color: rgba(36, 36, 36, 0.8);
 }
+
 .cat-circle-all, .cat-circle-all-o{
-    width: 3.9rem;
-    height: 3.9rem;
-    position: absolute;
-    border-radius: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
     border: .3rem solid var(--wightColor);
     transition-duration: .5s;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1);
-    -webkit-box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1);
-    -moz-box-shadow: 1px 2px 77px 28px rgba(0,0,0,.1); */
 }
-.cat-circle-all{
-    border-radius: .1rem;
-    width: .5rem;
-    height: .5rem;
-    transition-duration: .5s;
-    border: .3rem solid var(--secondcolor);
+.Home-box{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1rem;
 }
-.furniture-box{
-    left: 5rem;
-    top: 0;
+.cat-icon-home{
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--wightColor);
+    color: var(--wightColor);
 }
-.Appliances-box{
-    left: 0;
-    top: 3rem;
+.cat-text-home{
+    font-size: 1rem;
+    color: var(--wightColor);
+    font-family: 'Trebuchet MS', sans-serif;
 }
-.Ceramics-box{
-    right: 0;
-    top: 3rem;
+.disable-home-button{
+    display: none;
+    transition-duration: 1s;
 }
-.Sanitary-box{
-    right: 5rem;
-    top: 0;
-}
-.Sockets-box{
-    bottom: -1rem;
-    left: 5rem;
-}
-.GYM-box{
-    bottom: -1rem;
-    right: 5rem;
-}
-.Doors-box{
-    bottom: 2rem;
-    left: 0;
-}
-.Fit-out-box{
-    bottom: 2rem;
-    right: 0;
-}
-.Marble-box{
-    left: -1.5rem;
-    top: calc(50% - 1.8rem);
-}
-.Curtains-box{
-    right: -1.5rem;
-    top: calc(50% - 1.8rem);
+.appear-home-button{
+    display: flex;
+    transition-duration: 1s;
 }
 .cat-icon{
     width: 2rem;
@@ -665,68 +633,14 @@
 .cat-circle-all:hover, .cat-circle-all-o:hover{
     cursor: pointer;
 }
-.cat-circle-all-o:hover > .cat-icon,
-.cat-circle-all-o:hover > .cat-text{
-    color: var(--secondcolor);
-    fill: var(--secondcolor);
+.cat-circle-all-o:hover,
+.cat-circle-all-o:hover{
+    border: .3rem solid var(--secondcolor);
     transition-duration: 1s;
     transform: scale(1.1);
 }
-.blur-filter{
-    background-color: transparent;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-}
-/* Home Page button --------------------------------------------- */
-.home-page-cont-cont, .home-page-cont-cont-down{
-    position: absolute;
-    top: 7.6rem;
-    left: 0;
-    transition-duration: 0.5s;
-}
-.home-page-cont-cont-down{
-    top: 6.1rem;
-}
-.home-page-cont-o, .home-page-cont{
-    position: fixed;
-    width: 15rem;
-    height: 3rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-bottom-right-radius: 1rem;
-    z-index: -1;
-    background-color: var(--maincolor);
-    gap: .4rem;
-    font-size: 1.5rem;
-    overflow: hidden;
+.Icon-State-Active{
+    border: .3rem solid var(--secondcolor);
     transition-duration: 1s;
-}
-.home-page-cont{
-    height: 0;
-    transition-duration: 1s;
-}
-.home-page-cont:hover, .home-page-cont-o:hover{
-    background-color: var(--thirdcolor);
-    cursor: pointer;
-}
-.home-page-text{
-    color: var(--wightColor);
-    font-family: 'Trebuchet MS', sans-serif;
-}
-.home-page-icon{
-    fill: var(--wightColor);
+    transform: scale(1.1);
 }

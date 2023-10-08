@@ -13,7 +13,7 @@ import { FaToilet } from "react-icons/fa";
 import { GiTheaterCurtains } from "react-icons/gi";
 import { GiMarbles } from "react-icons/gi";
 import { BsBuildings } from "react-icons/bs";
-import { GrHomeRounded } from "react-icons/gr";
+import { BiSolidHome } from "react-icons/bi";
 import "./NavBar.css"
 import part1 from "../../Images/Logo/part1.png";
 import part2 from "../../Images/Logo/part6.png";
@@ -25,7 +25,30 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [Language, setLanguage] = useState(false);
   const [LanguageClicked, setLanguageClicked] = useState(false);
-  const [homePage, setHomePage] = useState(false);
+  const [homeState, setHomeState] = useState(false);
+
+  const [furnitureState, setFurnitureState] = useState(false);
+  const [appliancesState, setAppliancesState] = useState(false);
+  const [ceramicsState, setCeramicsState] = useState(false);
+  const [sanitaryState, setSanitaryState] = useState(false);
+  const [socketState, setSocketState] = useState(false);
+  const [gymState, setGymState] = useState(false);
+  const [doorState, setDoorState] = useState(false);
+  const [fitoutState, setFitoutState] = useState(false);
+  const [marbleState, setMarbleState] = useState(false);
+  const [curtinState, setCurtinState] = useState(false);
+
+  const furnitureStateIcon = furnitureState ? 'Icon-State-Active':''
+  const appliancesStateIcon = appliancesState ? 'Icon-State-Active':''
+  const ceramicsStateIcon = ceramicsState ? 'Icon-State-Active':''
+  const sanitaryStateIcon = sanitaryState ? 'Icon-State-Active':''
+  const socketStateIcon = socketState ? 'Icon-State-Active':''
+  const gymStateIcon = gymState ? 'Icon-State-Active':''
+  const doorStateIcon = doorState ? 'Icon-State-Active':''
+  const fitoutStateIcon = fitoutState ? 'Icon-State-Active':''
+  const marbleStateIcon = marbleState ? 'Icon-State-Active':''
+  const curtinStateIcon = curtinState ? 'Icon-State-Active':''
+
 
   const listState = list ? 'fa-icon-open':'fa-icon-close'
   const listTextState1 = list ? 'fa-text-o':'fa-text'
@@ -41,10 +64,9 @@ const NavBar = () => {
   const categoriesCircle = categories? 'categories-icon-circle-o' : 'categories-icon-circle'
   const categoriesAll = categories? 'categories-all-o' : 'categories-all'
   const catCircleAll = categories? 'cat-circle-all-o' : 'cat-circle-all'
-  const blurFilter = categories? 'blur-filter' : 'blur-filter-o'
   const LanguageState1 = Language? 'english-language-o' : 'english-language'
   const LanguageState2 = Language? 'arabic-language-o' : 'arabic-language'
-  const homePageState = homePage ? 'home-page-cont-o' : 'home-page-cont'
+  const homeButtonState = homeState? 'appear-home-button' : 'disable-home-button'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,17 +91,67 @@ const NavBar = () => {
   const logoState1 = scrolled ? 'nav-logo-parts nav-logo-part1-close' : 'nav-logo-parts nav-logo-part1'
   const logoState2 = scrolled ? 'nav-logo-part2-close' : 'nav-logo-part2'
   const logoState3 = scrolled ? 'nav-logo-parts nav-logo-part3-close' : 'nav-logo-parts nav-logo-part3'
-  const homeButtonScroll = scrolled ? 'home-page-cont-cont-down' : 'home-page-cont-cont'
+  const catListScroll = scrolled ? 'categories-icon-circle-o-down' : ''
 
   const location = useLocation();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (location.pathname === '/Main') {
-      setHomePage(false);
+      setHomeState(false);
     } else if (location.pathname === '/') {
-      setHomePage(false);
+      setHomeState(false);
     } else {
-      setHomePage(true);
+      setHomeState(true);
+    }
+    if (location.pathname === '/Furniture') {
+      setFurnitureState(true);
+    } else {
+      setFurnitureState(false);
+    }
+    if (location.pathname === '/Appliances') {
+      setAppliancesState(true);
+    } else {
+      setAppliancesState(false);
+    }
+    if (location.pathname === '/ceramics') {
+      setCeramicsState(true);
+    } else {
+      setCeramicsState(false);
+    }
+    if (location.pathname === '/Sanitary') {
+      setSanitaryState(true);
+    } else {
+      setSanitaryState(false);
+    }
+    if (location.pathname === '/Sockets') {
+      setSocketState(true);
+    } else {
+      setSocketState(false);
+    }
+    if (location.pathname === '/Gym') {
+      setGymState(true);
+    } else {
+      setGymState(false);
+    }
+    if (location.pathname === '/Doors') {
+      setDoorState(true);
+    } else {
+      setDoorState(false);
+    }
+    if (location.pathname === '/Fitout') {
+      setFitoutState(true);
+    } else {
+      setFitoutState(false);
+    }
+    if (location.pathname === '/Marble') {
+      setMarbleState(true);
+    } else {
+      setMarbleState(false);
+    }
+    if (location.pathname === '/Curtains') {
+      setCurtinState(true);
+    } else {
+      setCurtinState(false);
     }
     },);
   return (
@@ -93,18 +165,18 @@ const NavBar = () => {
         <span className={listTextState2}>CLose</span>
       </div>
         <div className='categories-icon-cont'>
-        <div className={blurFilter} onClick={() =>setCategories(false)}></div>
-        <div className={categoriesCircle}>
-          <Link to="/Furniture"><div className={`furniture-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
-          <Link to="/Appliances"><div className={`Appliances-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
-          <Link to="/ceramics"><div className={`Ceramics-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><FaBorderAll className='cat-icon'/><span className='cat-text'>Ceramics</span></div></Link>
-          <Link to="/Sanitary"><div className={`Sanitary-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><FaToilet className='cat-icon'/><span className='cat-text'>Sanitary</span></div></Link>
-          <Link to="/Sockets"><div className={`Sockets-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiElectricalSocket className='cat-icon'/><span className='cat-text'>Sockets</span></div></Link>
-          <Link to="/Gym"><div className={`GYM-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><CgGym className='cat-icon'/><span className='cat-text'>GYM</span></div></Link>
-          <Link to="/Doors"><div className={`Doors-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><BsDoorOpenFill className='cat-icon'/><span className='cat-text'>Doors</span></div></Link>
-          <Link to="/Fitout"><div className={`Fit-out-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
-          <Link to="/Marble"><div className={`Marble-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
-          <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll}`} onClick={() => {setCategories(false)}}><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
+        <div className={`${categoriesCircle} ${catListScroll}`}>
+          <Link to="/Furniture"><div className={`furniture-box ${catCircleAll} ${furnitureStateIcon}`} ><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
+          <Link to="/Appliances"><div className={`Appliances-box ${catCircleAll} ${appliancesStateIcon}`} ><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
+          <Link to="/ceramics"><div className={`Ceramics-box ${catCircleAll} ${ceramicsStateIcon}`} ><FaBorderAll className='cat-icon'/><span className='cat-text'>Ceramics</span></div></Link>
+          <Link to="/Sanitary"><div className={`Sanitary-box ${catCircleAll} ${sanitaryStateIcon}`} ><FaToilet className='cat-icon'/><span className='cat-text'>Sanitary</span></div></Link>
+          <Link to="/Sockets"><div className={`Sockets-box ${catCircleAll} ${socketStateIcon}`} ><GiElectricalSocket className='cat-icon'/><span className='cat-text'>Sockets</span></div></Link>
+          <Link to="/Main" onClick={() => setCategories(false)} className={homeButtonState}><div className={`Home-box ${catCircleAll}`} ><BiSolidHome className='cat-icon-home'/><span className='cat-text-home'>Home</span></div></Link>
+          <Link to="/Gym"><div className={`GYM-box ${catCircleAll} ${gymStateIcon}`} ><CgGym className='cat-icon'/><span className='cat-text'>GYM</span></div></Link>
+          <Link to="/Doors"><div className={`Doors-box ${catCircleAll} ${doorStateIcon}`} ><BsDoorOpenFill className='cat-icon'/><span className='cat-text'>Doors</span></div></Link>
+          <Link to="/Fitout"><div className={`Fit-out-box ${catCircleAll} ${fitoutStateIcon}`} ><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
+          <Link to="/Marble"><div className={`Marble-box ${catCircleAll} ${marbleStateIcon}`} ><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
+          <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll} ${curtinStateIcon}`} ><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
         </div>
           <div className= 'categories-icon' onClick={() => setCategories(!categories)}>
             <div className={categoriesClose1}></div>
@@ -138,12 +210,6 @@ const NavBar = () => {
           <span className={LanguageState2}>العربية</span>
         </div>
       </div>
-      <Link to="/Main" className={homeButtonScroll}>
-        <div className={homePageState}>
-          <GrHomeRounded className='home-page-icon'/>
-          <span className='home-page-text'>Home Page</span>
-        </div>
-      </Link>
     </div>
   )
 }
