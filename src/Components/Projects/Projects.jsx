@@ -14,7 +14,7 @@ const Projects = () => {
 				<span>DISCOVER US</span>
 			</div>
 			<div className='main-title large'>OUR PROJECTS</div>
-			<div className='projects-container'>
+			{/* <div className='projects-container'>
 				<div className='projects-card projects-card-1'>
 					<img src={projectImg1} className='projects-card-img' alt=''/>
 				</div>
@@ -27,6 +27,20 @@ const Projects = () => {
 				<div className='projects-card projects-card-4'>
 					<img src={projectImg4} className='projects-card-img' alt=''/>
 				</div>
+			</div> */}
+			<div className='projects-card-cont'>
+			<div class='projects-card projects-card-1'>
+				<div class='projects-card-text projects-card-text-1'>’Hallo!</div>
+			</div>
+			<div class='projects-card projects-card-2'>
+				<div class='projects-card-text projects-card-text-2'>’Hallo!</div>
+			</div>
+			<div class='projects-card projects-card-3'>
+				<div class='projects-card-text projects-card-text-3'>’Hallo!</div>
+			</div>
+			<div class='projects-card projects-card-1'>
+				<div class='projects-card-text projects-card-text-4'>’Hallo!</div>
+			</div>
 			</div>
 		</div>
 	)

@@ -66,9 +66,14 @@ const Hero = () => {
           We provide a wide range of high-quality furniture from trusted suppliers. 
           Whether you're seeking classic or modern furniture, we offer a variety of options for you to choose from.
           </span>
-          <Link className='Know-more-bottom'>
+          {/* <Link className='Know-more-bottom'>
             <button className='Know-more-bottom-ch'>KNOW MORE</button>
-          </Link>
+          </Link> */}
+          <div class="Know-more-bottom">
+            <button className="Know-more-bottom-ch">
+              KNOW MORE
+            </button>
+          </div>
         </div>
       </div>
     </div>

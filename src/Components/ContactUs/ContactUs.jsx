@@ -32,12 +32,28 @@ const ContactUs = () => {
 					</div>
 					<div className='contact-det-cont'>
 						<span className='third-Title'>SOCIAL</span>
-						<div className='contact-det-icons-cont'>
-							<FaFacebookF className='contact-det-icons'/>
-							<FaXTwitter className='contact-det-icons'/>
-							<FaInstagram className='contact-det-icons'/>
-							<FaWhatsapp className='contact-det-icons'/>
-						</div>
+						<ul className='contact-det-icons-cont'>
+							<li>
+								<a href="#">
+									<FaFacebookF className='contact-det-icons'/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<FaXTwitter className='contact-det-icons'/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<FaInstagram className='contact-det-icons'/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<FaWhatsapp className='contact-det-icons'/>
+								</a> 
+							</li>
+							</ul>
 					</div>
 				</div>
 				{/* <div className='contact-us-sec contact-us-sec3'>text area</div> */}

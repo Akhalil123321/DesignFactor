@@ -7,7 +7,6 @@ const Tail = () => {
       <div className='tail-container'>
         <div className='tail-container-det tail-container-det1'>
           <span className='tail-container-det-title'>Categories</span>
-          <div className='tail-container-det-dis'>
             <span className='tail-container-det-dis-text'>Furniture </span>
             <span className='tail-container-det-dis-text'>Appliances </span>
             <span className='tail-container-det-dis-text'>Marble </span>
@@ -18,7 +17,6 @@ const Tail = () => {
             <span className='tail-container-det-dis-text'>Curtains</span>
             <span className='tail-container-det-dis-text'>Ceramics</span>
             <span className='tail-container-det-dis-text'>Sanitary Ware</span>
-          </div>
         </div>
         <div className='tail-container-det tail-container-det2'>
           <span className='tail-container-det-title'>Projects</span>

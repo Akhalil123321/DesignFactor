@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from "react-router-dom";
-import { MdLanguage } from "react-icons/md";
-import { BiMessageRoundedDetail } from "react-icons/bi";
+import { FaAngleDown } from "react-icons/fa6";
+import enLanguage from '../../Images/ENLanguage.png'
 import { FaCouch } from "react-icons/fa";
 import { FaBorderAll } from "react-icons/fa6";
 import { RiFridgeFill } from "react-icons/ri";
@@ -51,21 +52,14 @@ const NavBar = () => {
 
 
   const listState = list ? 'fa-icon-open':'fa-icon-close'
-  const listTextState1 = list ? 'fa-text-o':'fa-text'
-  const listTextState2 = list ? 'fa-close-o':'fa-close'
   const circleState = list ? 'circle-open' : 'circle-close'
   const fa1State = list ? 'fa1-open' : 'fa1-close'
   const fa2State = list ? 'fa2-open' : 'fa2-close'
   const fa3State = list ? 'fa3-open' : 'fa3-close'
-  const categoriesClose1 = categories ? 'categories-close-icon-x-1-o' : 'categories-close-icon-x-1'
-  const categoriesClose2 = categories ? 'categories-close-icon-x-2-o' : 'categories-close-icon-x-2'
   const categoriesText = categories? 'categories-icon-text-o' : 'categories-icon-text'
   const categoriesClose = categories? 'categories-icon-close-o' : 'categories-icon-close'
   const categoriesCircle = categories? 'categories-icon-circle-o' : 'categories-icon-circle'
-  const categoriesAll = categories? 'categories-all-o' : 'categories-all'
   const catCircleAll = categories? 'cat-circle-all-o' : 'cat-circle-all'
-  const LanguageState1 = Language? 'english-language-o' : 'english-language'
-  const LanguageState2 = Language? 'arabic-language-o' : 'arabic-language'
   const homeButtonState = homeState? 'appear-home-button' : 'disable-home-button'
 
   useEffect(() => {
@@ -158,13 +152,28 @@ const NavBar = () => {
     <div className={scrollState}>
     <div className='fa-container'>
       <div className={listState} onClick={() => {setList(!list); setCategories(false)}}>
-        <span className={fa1State}></span>
         <span className={fa2State}></span>
+        <span className={fa1State}></span>
         <span className={fa3State}></span>
-        <span className={listTextState1}>List</span>
-        <span className={listTextState2}>CLose</span>
       </div>
-        <div className='categories-icon-cont'>
+      <div className={circleState}></div>
+    </div>
+        <div className='list-all-cont-box'>
+          <div className='categories-icon-cont' onClick={() => setCategories(!categories)}>
+            <span className={categoriesText}>
+              Categories
+            </span>
+            <span className={categoriesClose}>
+              Close
+            </span>
+          </div>
+        </div>
+        <div className='list-all-cont-box'>
+          <div className='nav-careers-cont'>
+            <span>Careers</span>
+          </div>
+        </div>
+          <div className='space-width'></div>
         <div className={`${categoriesCircle} ${catListScroll}`}>
           <Link to="/Furniture"><div className={`furniture-box ${catCircleAll} ${furnitureStateIcon}`} ><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
           <Link to="/Appliances"><div className={`Appliances-box ${catCircleAll} ${appliancesStateIcon}`} ><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
@@ -178,39 +187,35 @@ const NavBar = () => {
           <Link to="/Marble"><div className={`Marble-box ${catCircleAll} ${marbleStateIcon}`} ><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
           <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll} ${curtinStateIcon}`} ><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
         </div>
-          <div className= 'categories-icon' onClick={() => setCategories(!categories)}>
-            <div className={categoriesClose1}></div>
-            <div className={categoriesClose2}></div>
-            <div className={`categories-icon-1 ${categoriesAll}`}></div>
-            <div className={`categories-icon-2 ${categoriesAll}`}></div>
-            <div className={`categories-icon-3 ${categoriesAll}`}></div>
-            <div className={`categories-icon-4 ${categoriesAll}`}></div>
-        </div>
-          <span className={categoriesText}>Categories</span>
-          <span className={categoriesClose}>Close</span>
-        </div>
-    </div>
-    <Link to="/Main" className='nav-logo-cont' onClick={() => setCategories(false)}>
-    <span class="go-main-text">Home Page</span>
-      <div className='Nav-Logo' >
-          <img src={part1} alt='' className={logoState1}/>
-          <div className='part2-parent'><img src={part2} alt='' className={logoState2}/></div>
-          <div className='part3-parent'><img src={part3} alt='' className={logoState3}/></div>
-      </div>
-    </Link>
-      <div className={circleState}></div>
-      <div className='right-container'>
-        <div className= 'contact-icon-cont' onClick={() =>setCategories(false)}>
-          <BiMessageRoundedDetail className= 'contact-icon'/>
-          <span className='contact-icon-text'> Contact us</span>
-        </div>
-        <div className='languages-icon-cont'>
-          <MdLanguage className={`languages-icon ${LanguageClicked ? 'language-clicked' : ''}`} onClick={() =>{setCategories(false); setLanguage(!Language); languageHandleClick()}}/>
-          <span className={LanguageState1}>English</span>
-          <span className={LanguageState2}>العربية</span>
-        </div>
+          <Link to="/Main" className='nav-logo-cont' onClick={() => setCategories(false)}>
+          <span class="go-main-text">Home Page</span>
+            <div className='Nav-Logo' >
+                <img src={part1} alt='' className={logoState1}/>
+                <div className='part2-parent'><img src={part2} alt='' className={logoState2}/></div>
+                <div className='part3-parent'><img src={part3} alt='' className={logoState3}/></div>
+            </div>
+          </Link>
+          <div className='space-width'></div>
+    <div className='list-all-cont-box'>
+      <div className='nav-contact-cont'>
+        <a href="tel:009710508069215">050 806 9215</a>
       </div>
     </div>
+    <div className='list-all-cont-box'>
+      <div className='nav-email-cont'>
+        <a href="https://api.whatsapp.com/send?phone=971508069215" target="_blank">Chat With Us</a>
+      </div>
+    </div>
+        <div className='Language-bar-cont-par'>
+          <div className='Language-bar-cont'>
+            <div className='language-butt-cont'>
+              <span className='language-butt-text'>EN</span>
+              <img src={enLanguage} alt='' className='language-butt-flag'/>
+            </div>
+          </div>
+          <FaAngleDown className='language-arrow'/>
+        </div>
+      </div>
   )
 }
 export default NavBar
