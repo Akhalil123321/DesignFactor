@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 import enLanguage from '../../Images/ENLanguage.png'
+import arLanguage from '../../Images/ARLanguage.png'
 import { FaCouch } from "react-icons/fa";
 import { FaBorderAll } from "react-icons/fa6";
 import { RiFridgeFill } from "react-icons/ri";
@@ -27,6 +28,9 @@ const NavBar = () => {
   const [Language, setLanguage] = useState(false);
   const [LanguageClicked, setLanguageClicked] = useState(false);
   const [homeState, setHomeState] = useState(false);
+  const [englishActive, setEnglishActive] = useState(true);
+  const [arabicActive, setArabicActive] = useState(false);
+  const [order, setOrder] = useState(true);
 
   const [furnitureState, setFurnitureState] = useState(false);
   const [appliancesState, setAppliancesState] = useState(false);
@@ -49,6 +53,9 @@ const NavBar = () => {
   const fitoutStateIcon = fitoutState ? 'Icon-State-Active':''
   const marbleStateIcon = marbleState ? 'Icon-State-Active':''
   const curtinStateIcon = curtinState ? 'Icon-State-Active':''
+  const englishIsActive = englishActive ? '':'english-language-close'
+  const arabicIsActive = arabicActive ? '':'arabic-language-close'
+  const orderActive = order ? 'english-order-active':'arabic-order-active'
 
 
   const listState = list ? 'fa-icon-open':'fa-icon-close'
@@ -207,13 +214,17 @@ const NavBar = () => {
       </div>
     </div>
         <div className='Language-bar-cont-par'>
-          <div className='Language-bar-cont'>
-            <div className='language-butt-cont'>
+          <div className={`Language-bar-cont ${orderActive}`}>
+            <div className={`language-butt-cont ${englishIsActive}`} onClick={() => {setArabicActive(false); setOrder(true)}}>
               <span className='language-butt-text'>EN</span>
               <img src={enLanguage} alt='' className='language-butt-flag'/>
             </div>
+            <div className={`language-butt-cont ${arabicIsActive}`}  onClick={() => {setEnglishActive(false); setOrder(false)}}>
+              <span className='language-butt-text'>AR</span>
+              <img src={arLanguage} alt='' className='language-butt-flag'/>
+            </div>
           </div>
-          <FaAngleDown className='language-arrow'/>
+          <FaAngleDown className='language-arrow'  onClick={() => {setArabicActive(true); setEnglishActive(true)}}/>
         </div>
       </div>
   )
