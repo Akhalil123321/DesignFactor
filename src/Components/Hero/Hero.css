@@ -1,5 +1,5 @@
 .hero{
-    padding: 2em 5rem 2rem 5rem;
+    padding: 0em 5rem 0rem 5rem;
 }
 .hero-about-us-container{
     display: flex;
@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 80vh;
     margin-top: 4rem;
 }
 .hero-about-us-content1, .hero-about-us-content2{
@@ -79,7 +78,6 @@
 }
 .ver-circle-360-ball{
     animation: verSmallBallRotate 7s linear infinite;
-
 }
 @keyframes horSmallBallRotate { 
     0% { 
@@ -186,4 +184,115 @@
     border-left-color: var(--secondcolor);
     width: 100%;
     height: 100%;
+  }
+  @media screen and (max-width:900px) {
+    .hero-about-us-container{
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .hero-about-us-content1, .hero-about-us-content2{
+        width: 100%;
+    }
+    .hero-about-us-content1{
+        width: 90%;
+        margin-top: 5rem;
+    }
+    .hero-circle-360{
+        width: 15rem;
+        height: 15rem;
+        right: -1.5rem;
+        bottom: -3rem;
+    }
+    .hor-circle-360{
+        width: 19rem;
+        height: 19rem;
+    }
+    .ver-circle-360{
+        width: 19rem;
+        height: 19rem;
+    }
+    @keyframes horSmallBallRotate { 
+        0% { 
+            transform: rotate(0deg)  
+                translateY(9.5rem) rotate(0deg); 
+        } 
+        100% { 
+            transform: rotate(360deg) 
+                translateY(9.5rem) rotate(-360deg);
+        } 
+    } 
+    @keyframes verSmallBallRotate { 
+        0% { 
+            transform: rotate(0deg)  
+                translateY(9.5rem) rotate(0deg); 
+        } 
+        100% { 
+            transform: rotate(360deg)  
+                translateY(9.5rem) rotate(-360deg); 
+        } 
+    } 
+  }
+  @media screen and (max-width:515px){
+    .hero{
+        padding: 4rem 2rem 0rem 2rem;
+    }
+    .hero-about-us-content2{
+        gap: 2rem;
+    }
+    .hero-about-us-content2-text1 {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .hero-about-us-content2-text2 {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .Know-more-bottom-ch{
+        font-size: 1rem;
+    }
+  }
+  @media screen and (max-width:420px){
+    .hero-circle-360{
+        width: 12rem;
+        height: 12rem;
+    }
+    .hor-circle-360{
+        width: 14rem;
+        height: 14rem;
+    }
+    .ver-circle-360{
+        width: 14rem;
+        height: 14rem;
+    }
+    @keyframes horSmallBallRotate { 
+        0% { 
+            transform: rotate(0deg)  
+                translateY(7rem) rotate(0deg); 
+        } 
+        100% { 
+            transform: rotate(360deg) 
+                translateY(7rem) rotate(-360deg);
+        } 
+    } 
+    @keyframes verSmallBallRotate { 
+        0% { 
+            transform: rotate(0deg)  
+                translateY(7rem) rotate(0deg); 
+        } 
+        100% { 
+            transform: rotate(360deg)  
+                translateY(7rem) rotate(-360deg); 
+        } 
+    } 
+  }
+  @media screen and (max-width:350px){
+    .hero-about-us-content2-text1 {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .hero-about-us-content2-text2 {
+        width: 100%;
+        font-size: .8rem;
+    }
   }

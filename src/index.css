@@ -49,17 +49,20 @@ html{
   color: var(--secondcolor);
   text-shadow: 1px 0 var(--secondcolor);
   font-size: 1.2rem;
-  width: 80%;
+  width:100%;
 }
 .large{
   font-size: 3.5rem;
   color: var(--wightColor);
   text-shadow: 1px 0 var(--wightColor);
-  width: 80%;
+  width:100%;
   margin-left: 12rem;
 }
+.contact-title{
+  margin-left: 4rem;
+}
 .main-title-cont {
-  width: 80%;
+  width:100%;
   margin-left: 7rem;
   display: flex;
   flex-direction: row;
@@ -80,14 +83,65 @@ html{
   html{
     font-size: 2vw;
     }
-}
-@media screen and (max-width:600px) {
-  html{
-    font-size: 1.9vw;
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .small{
+      font-size: 1.3rem;
+      width: 80%;
+      padding:0px;
+      line-height: 2;
+    }
+    .large{
+      font-size: 1.7rem;
+      padding: 0;
+      margin-left: 3rem;
+    }
+    .main-title-cont {
+      width: 80%;
+      margin-left: 0rem;
+    }
+    .point {
+      width: .7rem;
+    }
+    .contact-title{
+      margin-left: 2.8rem;
     }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:512px) {
   html{
-    font-size: 1.6vw;
+    font-size: 1.5vw;
     }
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .contact-title{
+      margin-left: 1.4rem;
+      margin-bottom: 3rem;
+    }
+    .third-Title{
+      font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:350px) {
+    .small{
+      font-size: 1rem;
+    }
+    .third-Title{
+      font-size: 1rem;
+    }
+    .contact-title{
+      margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width:330px) {
+  .small{
+    font-size: .8rem;
+    margin: 0;
+    padding: 0;
+  }
+  .large{
+    font-size: 1.2rem;
+    padding: 0;
+  }
 }

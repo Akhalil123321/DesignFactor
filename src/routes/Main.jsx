@@ -12,8 +12,8 @@ const MainEn = () => {
         <>
             <VideoBackground/>
             <FilterBar/>
-            <Hero/>
             <Categories/>
+            <Hero/>
             <Projects/>
             <ContactUs/>
             <Tail/>

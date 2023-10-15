@@ -195,11 +195,11 @@ const NavBar = () => {
           <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll} ${curtinStateIcon}`} ><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
         </div>
           <Link to="/Main" className='nav-logo-cont' onClick={() => setCategories(false)}>
-          <span class="go-main-text">Home Page</span>
-            <div className='Nav-Logo' >
-                <img src={part1} alt='' className={logoState1}/>
-                <div className='part2-parent'><img src={part2} alt='' className={logoState2}/></div>
-                <div className='part3-parent'><img src={part3} alt='' className={logoState3}/></div>
+          {/* <span class="go-main-text">Home Page</span> */}
+              <div className='Nav-Logo-parts-cont' >
+                  <img src={part1} alt='' className={`Image-logo-part-1 ${logoState1}`}/>
+                  <img src={part2} alt='' className={`Image-logo-part-2 ${logoState2}`}/>
+                  <img src={part3} alt='' className={`Image-logo-part-3 ${logoState3}`}/>
             </div>
           </Link>
           <div className='space-width'></div>
