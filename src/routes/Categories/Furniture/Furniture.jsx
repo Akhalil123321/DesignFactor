@@ -1,12 +1,143 @@
-import React from 'react'
-import "./Furniture.css"
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable jsx-a11y/alt-text */
+import React from "react"
+import { Link } from "react-router-dom";
+import FeaturedRooms from './FeaturedRooms'
+import AllRoomData from '../../../Data/AllRoomData'
+import './Furniture.css'
+export default function Home(props) {
+    // form State
+    const [roomsArray,setRoomsArray]=React.useState(AllRoomData)
+    const[forms,setForms]=React.useState({
+        RoomsType :'',
+        Guests:'',
+        pets:false,
+        Breakfast:false
+    })
+    console.log(forms);
+React.useEffect(()=>{
+    // room type
+    forms.RoomsType ==='single' && setRoomsArray(roomsArray.filter(item=>item.RoomsType.includes('single')))
+    forms.RoomsType ==='double' && setRoomsArray(roomsArray.filter(item=>item.RoomsType.includes('double')))
+    forms.RoomsType ==='family' && setRoomsArray(roomsArray.filter(item=>item.RoomsType.includes('family')))
+    forms.RoomsType ==='Presidential' && setRoomsArray(roomsArray.filter(item=>item.RoomsType.includes('Presidential')))
+    // Room Guests
+    forms.Guests ==='2' && setRoomsArray(roomsArray.filter(item=>item.Guests >= 2))
+    forms.Guests ==='3' && setRoomsArray(roomsArray.filter(item=>item.Guests >= 3))
+    forms.Guests ==='4' && setRoomsArray(roomsArray.filter(item=>item.Guests >= 4))
+    forms.Guests ==='5' && setRoomsArray(roomsArray.filter(item=>item.Guests >= 5))
+    forms.Guests ==='6' && setRoomsArray(roomsArray.filter(item=>item.Guests >= 6))
+    forms.Guests ==='10' && setRoomsArray(roomsArray.filter(item=>item.Guests === 10))
+    // room pets
+    forms.pets && setRoomsArray(roomsArray.filter(item=>item.Pets === true))
+    // room Breakfast
+    forms.Breakfast && setRoomsArray(roomsArray.filter(item=>item.Breakfast === true))
+},[forms])
 
-const Furniture = () => {
-  return (
-    <div className='str-page'>
-      <h1>FURNITURE PAGE UNDER DESIGNING !!</h1>
-    </div>
-  )
+    const allRoomData = roomsArray.map(allRommItem => {
+        return<FeaturedRooms
+        id={allRommItem.id}
+        {...allRommItem}
+        />
+    })
+
+function handleCange(event){
+    const{name, value, type, checked} = event.target
+    setForms(prevForms=>{
+        return{
+            ...prevForms,
+            [name]:type === 'checkbox' ? checked : value
+        }
+    })
+    setRoomsArray(AllRoomData)
 }
-
-export default Furniture
+return (
+    <main className="cat-fur-cont">
+        <div className="cat-fur-cont-ch">
+        <img 
+        src={`../../../Images/${props.image}`}
+        className='cat-fur-card-img'
+        />
+        <div className="cat-fur-card-det cat-fur-card-det1">
+            <h1 className="cat-fur-card-title card-width">Our Rooms</h1>
+            <hr className="line"/>
+            <p className="cat-fur-card-dis">All types of rooms at all prices</p>
+            <Link to="/"><button className="cat-fur-card-btn">RETURN HOME</button></Link>
+        </div>
+        </div>
+        <div className="cat-fur-search-forms">
+            <h2 className="cat-fur-head-name">Search Rooms</h2>
+            <hr className="line mini"/>
+       {/* forms */}
+        <form className="cat-fur-form-container">
+        <div className="cat-fur-form-one">
+            <p>Rooms Type</p>
+            <select 
+            id="roomsType"
+            className="cat-fur-select-box"
+            onChange={handleCange}
+            name="RoomsType"
+            value={forms.RoomsType}
+            >
+                
+                <option value="" >All</option>
+                <option value="single">single</option>
+                <option value="double">double</option>
+                <option value="family">family</option>
+                <option value="Presidential">Presidential</option>
+            </select>
+            </div>
+            <div className="cat-fur-form-two">
+            <p>Guests</p>
+            <select 
+            id="Guests"
+            className="cat-fur-select-box"
+            onChange={handleCange}
+            name="Guests"
+            value={forms.Guests}
+            >
+                <option value="">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value='10'>10</option>
+            </select>
+            </div>
+            <div className="check-boxes-container">
+                <div className="checkbox-one-container">
+                <input 
+                type='checkbox'
+                id="pets"
+                className="checkbox"
+                onChange={handleCange}
+                name="pets"
+                checked={forms.pets}
+                />
+                
+                <label htmlFor=''>  pets</label>
+                </div>
+                <div className="checkbox-one-container">
+                <input 
+                type='checkbox'
+                id="Breakfast"
+                className="checkbox"
+                onChange={handleCange}
+                name="Breakfast"
+                checked={forms.Breakfast}
+                />
+                <label htmlFor='Breakfast'>  Breakfast</label>
+                </div>
+            </div>
+        </form>
+        {/* end of forms */}
+        </div>
+        <div>
+            <div className="featured-room-container">
+            {allRoomData}
+            </div>
+        </div>
+    </main>
+)
+}

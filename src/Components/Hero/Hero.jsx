@@ -18,9 +18,9 @@ const Hero = () => {
     const mouseY = e.clientY;
     const relativeX = mouseX - centerX;
     const relativeY = mouseY - centerY;
-    const maxTilt = 40;
-    const tiltX = (relativeY / centerY) * maxTilt;
-    const tiltY = (-relativeX / centerX) * maxTilt;
+    const maxTilt = 3;
+    const tiltX = (relativeY / centerY) * maxTilt * 20;
+    const tiltY = (-relativeX / centerX) * maxTilt * 20;
     setTiltX(tiltX);
     setTiltY(tiltY);
   };
@@ -28,6 +28,9 @@ const Hero = () => {
     setTiltX(0);
     setTiltY(0);
   };
+  function open360(){
+    window.open('https://kuula.co/share/collection/7YCCl?logo=1&info=0&logosize=122&fs=1&vr=1&gyro=0&autorotate=0.12&thumbs=-1&inst=0&gcl=1','_black').focus()
+}
   return (
     <div className='hero'>
       <div className='main-title-cont main-title small'>
@@ -37,8 +40,9 @@ const Hero = () => {
       <div className='main-title large'>DESIGN FACTOR</div>
       <div className='hero-about-us-container'>
         <div className='hero-about-us-content1'>
-          <img src={largeImg} className='large-img-360' alt=''/>
+          <img src={largeImg} className='large-img-360' alt='' onClick={open360}/>
           <div
+            onClick={open360}
             id="circle-360"
             className="hero-circle-360"
             onMouseMove={handleMouseMove}
@@ -46,6 +50,7 @@ const Hero = () => {
             style={{
             transform: `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`,
             }}>
+            <div className='circle-inside-text'><span>Discover Our Virtual Tour</span></div>
               <img src={smallImg} className='small-img-360' alt=''/>
               <div className='small-img-360-shadow'></div>
               <div className='hor-circle-360'>
@@ -66,9 +71,6 @@ const Hero = () => {
           We provide a wide range of high-quality furniture from trusted suppliers. 
           Whether you're seeking classic or modern furniture, we offer a variety of options for you to choose from.
           </span>
-          {/* <Link className='Know-more-bottom'>
-            <button className='Know-more-bottom-ch'>KNOW MORE</button>
-          </Link> */}
           <div class="Know-more-bottom">
             <button className="Know-more-bottom-ch">
               KNOW MORE

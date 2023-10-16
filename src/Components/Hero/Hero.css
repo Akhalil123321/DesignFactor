@@ -40,10 +40,33 @@
     transition: transform 0.3s ease;
     transition: transform 0.3s ease;
 }
+.hero-circle-360:hover{
+    cursor: pointer;
+}
 .small-img-360{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+.circle-inside-text{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: .5;
+}
+.circle-inside-text span{
+    width: 50%;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--wightColor);
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.63);
 }
 .hor-circle-360{
     border: 2px solid white;
@@ -117,6 +140,9 @@
     width: 100%;
     height: 100%;
     border-top-left-radius: 10rem;
+}
+.large-img-360:hover{
+    cursor: pointer;
 }
 .hero-about-us-content2{
     justify-content: start;
@@ -285,6 +311,9 @@
                 translateY(7rem) rotate(-360deg); 
         } 
     } 
+    .circle-inside-text span{
+        font-size: 1rem;
+    }
   }
   @media screen and (max-width:350px){
     .hero-about-us-content2-text1 {

@@ -42,9 +42,13 @@
     color: var(--wightColor);
     font-size: 1.3rem;
 }
+.contact-det:hover{
+    cursor: pointer;
+
+}
 .contact-det-icons{
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 .contact-det-icons-cont {
     display: flex;

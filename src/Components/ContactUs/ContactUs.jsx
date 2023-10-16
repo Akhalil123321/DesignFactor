@@ -14,7 +14,15 @@ const ContactUs = () => {
 				<div className='contact-us-sec contact-us-sec1'>
 					<div className='contact-det-cont'>
 						<span className='third-Title'>MOBILE</span>
-						<span className='contact-det'>+971 50 806 9215</span>
+						<a 
+						href="tel:+971508069215" 
+						className='contact-det'
+						title='Call +971 50 806 9215'
+						target='_blank' 
+						rel="noreferrer"
+						>
+						+971 50 806 9215
+						</a>
 					</div>
 					<div className='contact-det-cont'>
 						<span className='third-Title'>PHONE</span>
@@ -28,7 +36,15 @@ const ContactUs = () => {
 				<div className='contact-us-sec contact-us-sec2'>
 					<div className='contact-det-cont'>
 						<span className='third-Title'>E-MAIL</span>
-						<span className='contact-det'>ramez@designfactor.ae</span>
+						<a 
+						className='contact-det' 
+						href='mailto:ramez@designfactor.ae?subject=Regarding%20Project&body=Hi%20Ramez,%0D%0A%0D%0AI%20would%20like%20to%20discuss%20the%20project.%0D%0A'
+						title='Mailto:ramez@designfactor.ae'
+						target='_blank' 
+						rel="noreferrer"
+						>
+						ramez@designfactor.ae
+						</a>
 					</div>
 					<div className='contact-det-cont'>
 						<span className='third-Title'>SOCIAL</span>
@@ -39,7 +55,7 @@ const ContactUs = () => {
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" className='neon-icon'>
 									<FaXTwitter className='contact-det-icons'/>
 								</a>
 							</li>

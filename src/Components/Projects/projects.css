@@ -39,19 +39,19 @@ html {
   box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.75);
 }
 .projects-card-1{
-	background: url(../../Images//Projects/Project1.jpg) no-repeat 100% 50%;
+	background: url(../../Images//Projects/VistaI/Main.png) no-repeat 100% 50%;
 	background-size: 150%;
 }
 .projects-card-2{
-	background: url(../../Images//Projects/Project2.jpg) no-repeat 100% 50%;
+	background: url(../../Images//Projects/TheGate/Main.png) no-repeat 100% 50%;
 	background-size: 150%;
 }
 .projects-card-3{
-	background: url(../../Images//Projects/Project3.jpg) no-repeat 100% 50%;
+	background: url(../../Images//Projects/Oasis2/Main.png) no-repeat 100% 50%;
 	background-size: 150%;
 }
 .projects-card-4{
-	background: url(../../Images//Projects/Project4.jpg) no-repeat 100% 50%;
+	background: url(../../Images//Projects/RukanLofts/Main.png) no-repeat 100% 50%;
 	background-size: 150%;
 }
 .projects-card:hover{
@@ -70,6 +70,7 @@ html {
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, .5), letter-spacing 1.5s ease-out;
 	border-radius: 0;
   border-bottom-right-radius: 10rem;
+  font-size: 150%;
 }
 .projects-card-text {
   display: block;
@@ -81,12 +82,13 @@ html {
   top: 90%;
   margin-top: -5rem;
   margin-left: -5rem;
-  font-size: 2rem;
+  font-size: 90%;
   font-family: Raleway, sans-serif;
   text-align: center;
   color: #fff;
   border-radius: 50%;
   background: var(--secondcolor);
+  font-weight: 700;
   transform: rotate(-180deg) translate(-10rem) rotate(180deg);
   box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
@@ -102,6 +104,10 @@ html {
   line-height: 8rem;
   font-size: 1.5rem;
   transform: rotate(-180deg) translate(-8rem,0rem) rotate(180deg);
+  font-size: 80%;
+}
+.projects-card-text{
+  transform: rotate(-180deg) translate(-10rem,-1rem) rotate(180deg);
 }
 .projects-card {
   border-bottom-right-radius: 6rem;
@@ -119,6 +125,11 @@ html {
   margin-top: -22.55rem;
   margin-left: -16.2rem;
   border-bottom-right-radius: 6rem;
+  font-size: 90%;
+  letter-spacing: .7rem;
+}
+.projects-card-text{
+  transform: rotate(-180deg) translate(-8rem,-1rem) rotate(180deg);
 }
 }
 @media screen and (max-width:450px){
@@ -144,7 +155,6 @@ html {
     width: 8rem;
     height: 8rem;
     line-height: 8rem;
-    font-size: 1.5rem;
     transform: rotate(-180deg) translate(-7rem,.1rem) rotate(180deg);
   }
   }
@@ -169,7 +179,7 @@ html {
       width: 7rem;
       height: 7rem;
       line-height: 7rem;
-      font-size: 1.5rem;
+      font-size:70%;
       transform: rotate(-180deg) translate(-6rem,-1rem) rotate(180deg);
     }
     .projects-card {

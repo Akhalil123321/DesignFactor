@@ -85,13 +85,13 @@
     .categories-img-shadow:hover .categories-img-text{
         color: var(--secondcolor);
         transition-duration: 1s;
-        -webkit-text-stroke: .5px var(--Backgroundcolor); 
+        text-shadow: 0px 0px 40px rgba(226,226,225,.5);
     }
     .categories-img-text{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: var(--wightColor);
         font-size: 3rem;
-        -webkit-text-stroke: .5px var(--Backgroundcolor); 
+        text-shadow: 0px 0px 19px rgba(0,0,0,0.63);
         font-weight: 900;
     }
     .swiper-slide-shadow-left,
