@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Sockets.css"
+import "../../Categories.css"
 
 const Sockets = () => {
   return (

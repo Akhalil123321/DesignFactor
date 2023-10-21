@@ -1,5 +1,5 @@
 import React from 'react'
-import './Doors.css'
+import '../../Categories.css'
 
 const Doors = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Ceramics.css"
+import "../../Categories.css"
 
 const Ceramics = () => {
   return (

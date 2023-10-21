@@ -38,7 +38,7 @@ const ContactUs = () => {
 						<span className='third-Title'>E-MAIL</span>
 						<a 
 						className='contact-det' 
-						href='mailto:ramez@designfactor.ae?subject=Regarding%20Project&body=Hi%20Ramez,%0D%0A%0D%0AI%20would%20like%20to%20discuss%20the%20project.%0D%0A'
+						href='mailto:ramez@designfactor.ae?subject=RFQ%20|%20Project%20Name&body=Dear%20Eng.Ramez,%0D%0A%0D%0AI%20would%20like%20to%20send%20an%20inquiry%20for:%0D%0A'
 						title='Mailto:ramez@designfactor.ae'
 						target='_blank' 
 						rel="noreferrer"

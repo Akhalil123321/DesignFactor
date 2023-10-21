@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Sanitary.css"
+import "../../Categories.css"
 
 const Sanitary = () => {
   return (

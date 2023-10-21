@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Fitout.css"
+import "../../Categories.css"
 
 const Fitout = () => {
   return (

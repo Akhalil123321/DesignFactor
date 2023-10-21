@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Curtains.css"
+import "../../Categories.css"
 
 const Curtains = () => {
   return (

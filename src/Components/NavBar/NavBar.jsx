@@ -75,6 +75,7 @@ const NavBar = () => {
         setScrolled(true);
       } else {
         setScrolled(false);
+        setCategories(false)
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -205,12 +206,12 @@ const NavBar = () => {
           <div className='space-width'></div>
     <div className='list-all-cont-box'>
       <div className='nav-contact-cont'>
-        <a href="tel:009710508069215">050 806 9215</a>
+        <a href="tel:009710501272852">050 127 2852</a>
       </div>
     </div>
     <div className='list-all-cont-box'>
       <div className='nav-email-cont'>
-        <a href="https://api.whatsapp.com/send?phone=971508069215" target="_blank">Chat With Us</a>
+        <a href="https://api.whatsapp.com/send?phone=971501272852" target="_blank">Chat With Us</a>
       </div>
     </div>
         <div className='Language-bar-cont-par'>

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import NavBar from './Components/NavBar/NavBar';
+import ContactUs from "./Components/ContactUs/ContactUs"
+import Tail from "./Components/Tail/Tail"
 import {
   BrowserRouter,
   Routes,
@@ -19,6 +21,7 @@ import Gym from './routes/Categories/Gym/Gym'
 import Marble from './routes/Categories/Marble/Marble'
 import Sanitary from './routes/Categories/Sanitary/Sanitary'
 import Sockets from './routes/Categories/Sockets/Sockets'
+import Project from './routes/Project'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,6 +41,9 @@ root.render(
         <Route path="Marble" element={<Marble/>} />
         <Route path="Sanitary" element={<Sanitary/>} />
         <Route path="Sockets" element={<Sockets/>} />
+        <Route path="Project" element={<Project/>} />
       </Routes>
+    <ContactUs/>
+    <Tail/>
   </BrowserRouter>
 );

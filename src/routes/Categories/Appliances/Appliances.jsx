@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Appliances.css"
+import "../../Categories.css"
 
 const Appliances = () => {
   return (

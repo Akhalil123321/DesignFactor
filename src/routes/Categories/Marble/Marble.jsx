@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Marble.css"
+import "../../Categories.css"
 
 const Marble = () => {
   return (
