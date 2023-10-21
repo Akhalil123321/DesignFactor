@@ -60,7 +60,10 @@ return (
                 <h1 className="cat-card-title card-width">FURNITURES</h1>
                 <hr className="line"/>
                 <p className="cat-card-dis">All types of furnitures at all prices</p>
-                <Link to="/"><button className="cat-card-btn">RETURN HOME</button></Link>
+                <div className="cat-card-btn-cont">
+                    <Link to="/" className="cat-card-btn-ch"><button className="cat-card-btn">RETURN HOME</button></Link>
+                    <a href="#" className="cat-card-btn-ch"><button className="cat-card-btn">DOWNLOAD CATALOG</button></a>
+                </div>
             </div>
         </div>
         <div className="cat-search-forms">

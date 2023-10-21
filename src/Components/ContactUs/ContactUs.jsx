@@ -50,7 +50,7 @@ const ContactUs = () => {
 						<span className='third-Title'>SOCIAL</span>
 						<ul className='contact-det-icons-cont'>
 							<li>
-								<a href="#">
+								<a href="https://www.facebook.com/ramez.eg.uae.tur.sa/" target='_blank' rel="noreferrer">
 									<FaFacebookF className='contact-det-icons'/>
 								</a>
 							</li>
@@ -65,7 +65,7 @@ const ContactUs = () => {
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://api.whatsapp.com/send?phone=971501272852" target="_blank" rel="noreferrer">
 									<FaWhatsapp className='contact-det-icons'/>
 								</a> 
 							</li>

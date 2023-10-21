@@ -78,12 +78,25 @@ width: 35%;
 max-width:100px ;
 margin-top: .8rem;
 }
+.cat-card-btn-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+}
 .cat-card-btn{
 font-size:1rem;
 padding: .5rem 1rem;
-margin: 1rem;
+margin: 1rem 0 1rem 0;
 border: .2em solid var(--secondcolor);
 background-color: var(--secondcolor);
+width: 100%;
+box-sizing: border-box;
+}
+.cat-card-btn-ch{
+    width: 100%;
 }
 .cat-card-btn:hover{
 background-color: transparent;

@@ -9,7 +9,7 @@ const MainEn = () => {
     return (
         <>
             <VideoBackground/>
-            <FilterBar/>
+            {/* <FilterBar/> */}
             <Categories/>
             <Hero/>
             <Projects/>
