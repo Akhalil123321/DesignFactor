@@ -10,9 +10,9 @@ const Projects = () => {
 	return (
 			<div className='projects'>
 				<div className='main-title-cont main-title small'>
-				<img src={point} alt='' className='point'/> 
-				<span>DISCOVER US</span>
-			</div>
+					<img src={point} alt='' className='point'/> 
+					<span>DISCOVER US</span>
+				</div>
 			<div className='main-title large'>OUR PROJECTS</div>
 			{/* <div className='projects-container'>
 				<div className='projects-card projects-card-1'>

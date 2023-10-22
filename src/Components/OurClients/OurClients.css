@@ -1,0 +1,73 @@
+.our-clients-cont{
+    padding: 2em 5rem 0rem 5rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+.clients-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 5rem 0 2rem 0;
+}
+.clients-card-cont {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: #eee;
+    user-select: none;
+    width: 17rem;
+    height: 19rem;
+    border: 1px solid #ffffff22;
+    background-color: #282c34;
+    background: linear-gradient(0deg, var(--maincolor) 0%, var(--Backgroundcolor) 100%);
+    box-shadow: 0 7px 20px 5px var(--maincolor);
+    border-radius: 0.7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    transition: 0.5s all;
+    flex: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clients-card-ch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+    padding: 1rem;
+}
+.clients-card-img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clients-card-cont ::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px #ffffff08;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: 0.7s all;
+}
+.clients-card-cont:hover {
+    border: 1px solid #ffffff44;
+    box-shadow: 0 7px 50px 10px var();
+    transform: scale(1.015);
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+.clients-card-cont:hover ::before {
+    filter: brightness(0.5);
+    top: -100%;
+    left: 200%;
+}
