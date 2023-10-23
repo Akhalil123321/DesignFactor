@@ -54,7 +54,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 .contact-det-icons-cont li {
@@ -110,6 +110,9 @@
 @media screen and (max-width:515px) {
     .contact-us-page-container{
         padding: 0rem 2rem 1rem 2rem;
+    }
+    .contact-det-icons-cont{
+        gap: 1rem;
     }
     .contact-us-sec-container{
         align-items: flex-start;

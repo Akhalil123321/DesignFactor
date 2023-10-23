@@ -2,6 +2,13 @@ import React from 'react'
 import point from "../../Images/Logo/part5.png"
 import AMLogo from "../../Images/Logo/AMLogo.png"
 import ReporajLogo from "../../Images/Logo/ReportajLogo.png"
+import TIJLogo from '../../Images/Logo/TIJLogo.png'
+import ModeonLogo from '../../Images/Logo/ModeonLogo.png'
+import EmiratesLogo from '../../Images/Logo/EmiratesLikLogo.png'
+import FattanLogo from '../../Images/Logo/FattanLogo.png'
+import SSPDLogo from '../../Images/Logo/SSPDLogo.png'
+import RotanaLogo from '../../Images/Logo/RotanaLogo.png'
+import TahnonLogo from '../../Images/Logo/TahnonLogo.png'
 import './OurClients.css'
 
 const OurClients = () => {
@@ -15,14 +22,48 @@ const OurClients = () => {
 			<div className='clients-container'>
 				<div class="clients-card-cont">
 					<div class='clients-card-ch'>
+						<img class='clients-card-img' src={ReporajLogo} alt="NFT" />
+					</div>
+				</div>
+				<div class="clients-card-cont">
+					<div class='clients-card-ch'>
 						<img class='clients-card-img' src={AMLogo} alt="NFT" />
 						{/* <h2>A&M INTERNATIONAL</h2> */}
 					</div>
 				</div>
 				<div class="clients-card-cont">
 					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={ReporajLogo} alt="NFT" />
-						{/* <h2>REAPORTAJ PROPARTIES</h2> */}
+						<img class='clients-card-img' src={TIJLogo} alt="NFT" />
+					</div>
+				</div>
+				<div class="clients-card-cont">
+					<div class='clients-card-ch'>
+						<img class='clients-card-img' src={ModeonLogo} alt="NFT" />
+					</div>
+				</div>
+				<div class="clients-card-cont">
+					<div class='clients-card-ch'>
+						<img class='clients-card-img' src={EmiratesLogo} alt="NFT" />
+					</div>
+				</div>
+				<div class="clients-card-cont">
+					<div class='clients-card-ch'>
+						<img class='clients-card-img' src={FattanLogo} alt="NFT" />
+					</div>
+				</div>
+				<div class="clients-card-cont">
+					<div class='clients-card-ch'>
+						<img class='clients-card-img' src={SSPDLogo} alt="NFT" />
+					</div>
+				</div>
+				<div class="clients-card-cont">
+					<div class='clients-card-ch'>
+						<img class='clients-card-img' src={RotanaLogo} alt="NFT" />
+					</div>
+				</div>
+				<div class="clients-card-cont">
+					<div class='clients-card-ch'>
+						<img class='clients-card-img' src={TahnonLogo} alt="NFT" />
 					</div>
 				</div>
 			</div>

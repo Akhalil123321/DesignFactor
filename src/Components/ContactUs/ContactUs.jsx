@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaFacebookF } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
+import { BiLogoLinkedin } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
+import { AiOutlineYoutube } from "react-icons/ai";
 
 import './ContactUs.css'
 
@@ -17,11 +18,11 @@ const ContactUs = () => {
 						<a 
 						href="tel:+971508069215" 
 						className='contact-det'
-						title='Call +971 50 806 9215'
+						title='Call +971 50 127 2852'
 						target='_blank' 
 						rel="noreferrer"
 						>
-						+971 50 806 9215
+						+971 50 127 2852
 						</a>
 					</div>
 					<div className='contact-det-cont'>
@@ -55,18 +56,23 @@ const ContactUs = () => {
 								</a>
 							</li>
 							<li>
-								<a href="#" className='neon-icon'>
-									<FaXTwitter className='contact-det-icons'/>
+								<a href="#" className='neon-icon' target="_blank" rel="noreferrer">
+									<BiLogoLinkedin className='contact-det-icons'/>
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://instagram.com/arc.ramez?igshid=NjIwNzIyMDk2Mg==" target="_blank" rel="noreferrer">
 									<FaInstagram className='contact-det-icons'/>
 								</a>
 							</li>
 							<li>
 								<a href="https://api.whatsapp.com/send?phone=971501272852" target="_blank" rel="noreferrer">
 									<FaWhatsapp className='contact-det-icons'/>
+								</a> 
+							</li>
+							<li>
+								<a href="https://api.whatsapp.com/send?phone=971501272852" target="_blank" rel="noreferrer">
+									<AiOutlineYoutube className='contact-det-icons'/>
 								</a> 
 							</li>
 							</ul>
