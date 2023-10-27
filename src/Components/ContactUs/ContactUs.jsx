@@ -71,7 +71,7 @@ const ContactUs = () => {
 								</a> 
 							</li>
 							<li>
-								<a href="https://api.whatsapp.com/send?phone=971501272852" target="_blank" rel="noreferrer">
+								<a href="#" target="_blank" rel="noreferrer">
 									<AiOutlineYoutube className='contact-det-icons'/>
 								</a> 
 							</li>

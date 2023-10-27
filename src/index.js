@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import NavBar from './Components/NavBar/NavBar';
-import ContactUs from "./Components/ContactUs/ContactUs"
-import Tail from "./Components/Tail/Tail"
 import {
   BrowserRouter,
   Routes,
@@ -43,7 +41,5 @@ root.render(
         <Route path="Sockets" element={<Sockets/>} />
         <Route path="Project" element={<Project/>} />
       </Routes>
-    <ContactUs/>
-    <Tail/>
   </BrowserRouter>
 );
