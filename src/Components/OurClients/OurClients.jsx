@@ -20,52 +20,52 @@ const OurClients = () => {
 			</div>
 			<div className='main-title large'>OUR CLIENTS</div>
 			<div className='clients-container'>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={ReporajLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={ReporajLogo} alt="NFT" />
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={AMLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={AMLogo} alt="NFT" />
 						{/* <h2>A&M INTERNATIONAL</h2> */}
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={TIJLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={TIJLogo} alt="NFT" />
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={ModeonLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={ModeonLogo} alt="NFT" />
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={EmiratesLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={EmiratesLogo} alt="NFT" />
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={FattanLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={FattanLogo} alt="NFT" />
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={SSPDLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={SSPDLogo} alt="NFT" />
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={RotanaLogo} alt="NFT" />
+				<div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={RotanaLogo} alt="NFT" />
 					</div>
 				</div>
-				<div class="clients-card-cont">
-					<div class='clients-card-ch'>
-						<img class='clients-card-img' src={TahnonLogo} alt="NFT" />
+				{/* <div className="clients-card-cont">
+					<div className='clients-card-ch'>
+						<img className='clients-card-img' src={TahnonLogo} alt="NFT" />
 					</div>
-				</div>
+				</div> */}
 			</div>
     </div>
   )

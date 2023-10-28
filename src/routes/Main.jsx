@@ -6,6 +6,7 @@ import Hero from "../Components/Hero/Hero"
 import Projects from "../Components/Projects/Projects"
 import Categories from "../Components/Categories/Categories"
 import ContactUs from "../Components/ContactUs/ContactUs"
+import Locations from "../Components/Locations/Locations"
 import Tail from "../Components/Tail/Tail"
 
 
@@ -18,6 +19,7 @@ const MainEn = () => {
             <Hero/>
             <Projects/>
             <OurClients/>
+            <Locations/>
             <ContactUs/>
             <Tail/>
         </>

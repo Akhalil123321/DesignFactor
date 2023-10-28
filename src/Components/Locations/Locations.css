@@ -1,0 +1,70 @@
+.locations-cont{
+    padding: 2rem 5rem 2rem 5rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+.map-cont{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.map-img{
+    width: 100%;
+    object-fit: cover;
+    opacity: .7;
+}
+.map-pin{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50% 50% 50% 0;
+  background: var(--secondcolor);
+  position: absolute;
+  margin: -20px 0 0 -20px;
+  /* animation-name: bounce; */
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+.pin-one{
+    left: 52.5%;
+    top: 51%;
+}
+.pin-two{
+    left: 62.95%;
+    top: 53%;
+}
+.pin-three{
+    left: 62%;
+    top: 54.7%;
+}
+.map-pin:after{
+    content: '';
+    width: .8rem;
+    height: .8rem;
+    margin: .35rem 0 0 .35rem;
+    background: #2F2F2F;
+    position: absolute;
+    border-radius: 50%;
+}
+@keyframes bounce{
+  0%{
+    opacity: 0;
+    transform: translateY(-2000px) rotate(-45deg);
+}
+  60%{
+    opacity: 1;
+    transform: translateY(30px) rotate(-45deg);
+}
+  80%{
+    transform: translateY(-10px) rotate(-45deg);
+}
+  100%{
+    transform: translateY(0) rotate(-45deg);
+}
+}

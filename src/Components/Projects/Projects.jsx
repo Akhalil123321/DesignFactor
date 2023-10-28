@@ -29,17 +29,17 @@ const Projects = () => {
 				</div>
 			</div> */}
 			<div className='projects-card-cont'>
-			<div class='projects-card projects-card-1'>
-				<div class='projects-card-text projects-card-text-1'>AL MARYAH VISTA I</div>
+			<div className='projects-card projects-card-1'>
+				<div className='projects-card-text projects-card-text-1'>AL MARYAH VISTA I</div>
 			</div>
-			<div class='projects-card projects-card-2'>
-				<div class='projects-card-text projects-card-text-2'>THE GATE</div>
+			<div className='projects-card projects-card-2'>
+				<div className='projects-card-text projects-card-text-2'>THE GATE</div>
 			</div>
-			<div class='projects-card projects-card-3'>
-				<div class='projects-card-text projects-card-text-3'>OASIS TWO</div>
+			<div className='projects-card projects-card-3'>
+				<div className='projects-card-text projects-card-text-3'>OASIS TWO</div>
 			</div>
-			<div class='projects-card projects-card-4'>
-				<div class='projects-card-text projects-card-text-4'>RUKAN LOFTS</div>
+			<div className='projects-card projects-card-4'>
+				<div className='projects-card-text projects-card-text-4'>RUKAN LOFTS</div>
 			</div>
 			</div>
 		</div>
