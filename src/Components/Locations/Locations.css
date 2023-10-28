@@ -6,7 +6,7 @@
 }
 .map-cont{
     margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -67,4 +67,80 @@
   100%{
     transform: translateY(0) rotate(-45deg);
 }
+}
+@media screen and (max-width:1500px) {
+  .pin-one{
+    left: 53.5%;
+    top: 51%;
+}
+.pin-two{
+    left: 63.2%;
+    top: 53%;
+}
+.pin-three{
+    left: 62%;
+    top: 54.7%;
+}
+}
+@media screen and (max-width:1500px) {
+  .pin-one{
+    left: 53.9%;
+    top: 51.5%;
+}
+.pin-two{
+    left: 63.5%;
+    top: 53.2%;
+}
+.pin-three{
+    left: 62.4%;
+    top: 55.2%;
+}
+}
+@media screen and (max-width:900px) {
+  .locations-cont{
+      padding: 0rem 2rem 1rem 2rem;
+  }
+  .map-cont{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+  .map-pin{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50% 50% 50% 0;
+    background: var(--secondcolor);
+    position: absolute;
+    margin: -1rem 0 0 -1rem;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    transform: rotate(-45deg);
+    cursor: pointer;
+  }
+  .map-pin:after{
+    content: '';
+    width: .6rem;
+    height: .6rem;
+    margin: .2rem 0 0 .2rem;
+    background: #2F2F2F;
+    position: absolute;
+    border-radius: 50%;
+}
+}
+@media screen and (max-width:515px) {
+  .locations-cont{
+      padding: 0rem 2rem 1rem 2rem;
+  }
+  .map-cont{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width:350px) {
+  .locations-cont{
+      padding: 0rem 2rem 1rem 2rem;
+  }
+  .map-cont{
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
 }

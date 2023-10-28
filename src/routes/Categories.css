@@ -5,7 +5,7 @@
 	--orange: #f48915;
 	--darkGrey: #464D53;
 	--caloryCard: #656565;
-	--planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+	--planCard: linear-gradient(210.41deg, rgba(213, 156, 11, 0.7) 1.14%, rgb(233, 182, 53) 100.75%);
 	--appColor:  #3c3f45;
 	}
 
@@ -51,7 +51,7 @@
 }
 .btn-color-ch{
 	background-color: var(--btn-color-ch);
-    border: 2px solid var(--orange);
+    border: 2px solid var(--secondcolor);
 }
 .transparent-ch{
     background-color: transparent;
@@ -70,9 +70,6 @@
     top: 2rem;
 }
 @media screen and (max-width: 900px) {
-	html{
-		font-size: 12px;
-	}
 	.normal-title-ch{
 		font-size: 2.5rem;
 	}
@@ -116,7 +113,7 @@
 .projects-list-r-ch{
     font-size: 1rem;
     font-weight: 800;
-    color: var(--orange);
+    color: var(--secondcolor);
     text-transform: uppercase;
 }
 .projects-title-ch{
@@ -142,7 +139,7 @@
     line-height: 2.5rem;
 }
 .projects-client-ch>:nth-child(1){
-    color: var(--orange);
+    color: var(--secondcolor);
     
 }
 .projects-des-r-ch{
@@ -155,7 +152,7 @@
 }
 .project-box-bordered-ch{
     background-color: transparent;
-    border: 3px solid var(--orange);
+    border: 3px solid var(--secondcolor);
     position: absolute;
     top:-1rem;
     right: 11rem;
@@ -247,7 +244,7 @@ main{
 	}
 	.hero-r-side-ch{
 		width: 25%;
-		background-color: var(--orange);
+		background-color: var(--secondcolor);
 		position: relative;
 	}
 	.Slider-text-cont-ch{
@@ -260,7 +257,7 @@ main{
 		z-index: -2;
 	}
 	.slider-bar-ch{
-		background-color:var(--orange);
+		background-color:var(--secondcolor);
 		height:calc(100% - .8rem) ;
 		width: 26%;
 		position: absolute;
@@ -282,6 +279,7 @@ main{
 	.job-counter-cont-ch{
 		display: flex;
 		gap: 2rem;
+		align-items: center;
 	}
 	.job-counter-ch{
 		display: flex;
@@ -492,7 +490,7 @@ main{
 	.det-details-ch{
 		font-size: 1rem;
 		font-weight: 800;
-		color: var(--orange);
+		color: var(--secondcolor);
 		text-transform: uppercase;
 	}
 	.det-list-cont-ch{
