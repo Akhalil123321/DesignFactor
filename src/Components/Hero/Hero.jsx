@@ -1,4 +1,6 @@
 import {React, useState} from 'react'
+import ScrollTrigger from 'react-scroll-trigger';
+import TypeWriterEffect from 'react-typewriter-effect';
 import { Link } from "react-router-dom";
 import smallImg from '../../Images/360/small1.png'
 import largeImg from '../../Images/360/large1.png'
@@ -6,6 +8,7 @@ import "./Hero.css"
 import point from "../../Images/Logo/part5.png"
 
 const Hero = () => {
+  const [countOn, setCountOn] = useState(false)
   const [tiltX, setTiltX] = useState(0);
   const [tiltY, setTiltY] = useState(0);
 
@@ -33,11 +36,35 @@ const Hero = () => {
 }
   return (
     <div className='hero'>
-      <div className='main-title-cont main-title small'>
-        <img src={point} alt='' className='point'/> 
-        <span>MORE ABOUT US</span>
-      </div>
-      <div className='main-title large'>DESIGN FACTOR</div>
+      <ScrollTrigger onEnter={() => setCountOn(true)}>
+			<div className='main-title-cont main-title small'>
+				<img src={point} alt='' className='point'/>
+				<div>
+						{countOn &&
+						<TypeWriterEffect
+						cursorColor='transparent'
+						text={'MORE ABOUT US'}
+						startDelay={100}
+						typeSpeed={50}
+						textStyle={{ 
+						}}
+						/>
+				}
+				</div>
+			</div>
+			<div className='main-title large'>
+					{countOn &&
+					<TypeWriterEffect
+					cursorColor='transparent'
+					text={'DESIGN FACTOR'}
+					startDelay={1000}
+					typeSpeed={50}
+					textStyle={{ 
+					}}
+					/>
+			}
+			</div>
+			</ScrollTrigger>
       <div className='hero-about-us-container'>
         <div className='hero-about-us-content1'>
           <img src={largeImg} className='large-img-360' alt='' onClick={open360}/>

@@ -27,7 +27,6 @@
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     overflow: hidden;
-    transition: 0.5s all;
     flex: 0 auto;
     display: flex;
     align-items: center;

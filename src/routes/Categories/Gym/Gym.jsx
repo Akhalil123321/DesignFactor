@@ -41,6 +41,9 @@ export default function Gym() {
 					setCount(prevCount => prevCount = 2)
 			}
 	}
+	const gymCatalogue = () => {
+		window.open('https://drive.google.com/uc?export=download&id=1QkOafwmfP4ymBhQ4igfN8pMf77Lxxoff','_black').focus()
+	}
 return (
 <main className="secondary-page-main-cont-ch">
 			<section className="top-sec-ch">
@@ -81,8 +84,8 @@ return (
 							</div>
 						</div>
 						<div>
-							<button className='btn-ch btn-color-ch'>Get Started</button>
-							<button className='btn-ch btn-color-ch transparent-ch'>Learn More</button>
+							<button className='btn-ch btn-color-ch'>Send Inquiry</button>
+							<button className='btn-ch btn-color-ch transparent-ch' onClick={gymCatalogue}>Gym Catalogue</button>
 						</div>
 					</div>
 					<div className='hero-r-side-ch'>

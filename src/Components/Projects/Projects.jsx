@@ -1,4 +1,6 @@
-import React from 'react'
+import {React, useState} from 'react'
+import ScrollTrigger from 'react-scroll-trigger';
+import TypeWriterEffect from 'react-typewriter-effect';
 import point from "../../Images/Logo/part5.png"
 import projectImg1 from '../../Images/Projects/Project1.jpg'
 import projectImg2 from '../../Images/Projects/Project2.jpg'
@@ -7,13 +9,38 @@ import projectImg4 from '../../Images/Projects/Project4.jpg'
 import './projects.css'
 
 const Projects = () => {
+	const [countOn, setCountOn] = useState(false)
 	return (
 			<div className='projects'>
-				<div className='main-title-cont main-title small'>
-					<img src={point} alt='' className='point'/> 
-					<span>DISCOVER US</span>
+			<ScrollTrigger onEnter={() => setCountOn(true)}>
+			<div className='main-title-cont main-title small'>
+				<img src={point} alt='' className='point'/>
+				<div>
+						{countOn &&
+						<TypeWriterEffect
+						cursorColor='transparent'
+						text={'DISCOVER US'}
+						startDelay={100}
+						typeSpeed={50}
+						textStyle={{ 
+						}}
+						/>
+				}
 				</div>
-			<div className='main-title large'>OUR PROJECTS</div>
+			</div>
+			<div className='main-title large'>
+					{countOn &&
+					<TypeWriterEffect
+					cursorColor='transparent'
+					text={'OUR PROJECTS'}
+					startDelay={800}
+					typeSpeed={50}
+					textStyle={{ 
+					}}
+					/>
+			}
+			</div>
+			</ScrollTrigger>
 			{/* <div className='projects-container'>
 				<div className='projects-card projects-card-1'>
 					<img src={projectImg1} className='projects-card-img' alt=''/>

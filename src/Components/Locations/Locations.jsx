@@ -1,8 +1,12 @@
-import React from 'react'
+import {React, useState} from 'react'
+import ScrollTrigger from 'react-scroll-trigger';
+import TypeWriterEffect from 'react-typewriter-effect';
 import { motion } from "framer-motion";
-import worldMap from '../../Images/worldMap.jpg'
+import worldMap from '../../Images/worldMap.png'
+import point from "../../Images/Logo/part5.png"
 import './Locations.css'
 const Locations = () => {
+	const [countOn, setCountOn] = useState(false)
 	function openLocationAD(){
     window.open('https://maps.app.goo.gl/QRh9uhU7cRG4ADhk9','_black').focus()
 }
@@ -11,7 +15,35 @@ const Locations = () => {
 	const transition3 = {type: 'spring', duration: 2, delay: .6}
   return (
     <div className='locations-cont'>
-    	<div className='main-title large contact-title'>Our Locations</div>
+		<ScrollTrigger onEnter={() => setCountOn(true)}>
+			<div className='main-title-cont main-title small'>
+				<img src={point} alt='' className='point'/>
+				<div>
+						{countOn &&
+						<TypeWriterEffect
+						cursorColor='transparent'
+						text={'REACH US'}
+						startDelay={100}
+						typeSpeed={50}
+						textStyle={{ 
+						}}
+						/>
+				}
+				</div>
+			</div>
+			<div className='main-title large'>
+					{countOn &&
+					<TypeWriterEffect
+					cursorColor='transparent'
+					text={'Our Locations'}
+					startDelay={500}
+					typeSpeed={50}
+					textStyle={{ 
+					}}
+					/>
+			}
+			</div>
+			</ScrollTrigger>
 			<div className='map-cont'>
 				<img src={worldMap} alt='map' className='map-img'/>
 				<motion.div
