@@ -27,7 +27,7 @@ const OurClients = () => {
 						cursorColor='transparent'
 						text={'PREVIOUS PROJECTS'}
 						startDelay={100}
-						typeSpeed={50}
+						typeSpeed={10}
 						textStyle={{ 
 						}}
 						/>
@@ -39,8 +39,8 @@ const OurClients = () => {
 					<TypeWriterEffect
 					cursorColor='transparent'
 					text={'OUR CLIENTS'}
-					startDelay={1000}
-					typeSpeed={50}
+					startDelay={500}
+					typeSpeed={10}
 					textStyle={{ 
 					}}
 					/>

@@ -27,7 +27,7 @@ const Categories = () => {
 						cursorColor='transparent'
 						text={'OUR SCOPE OF WORK'}
 						startDelay={100}
-						typeSpeed={20}
+						typeSpeed={10}
 						textStyle={{ 
 						}}
 						/>
@@ -39,8 +39,8 @@ const Categories = () => {
 					<TypeWriterEffect
 					cursorColor='transparent'
 					text={'CATEGORIES'}
-					startDelay={600}
-					typeSpeed={20}
+					startDelay={500}
+					typeSpeed={10}
 					textStyle={{ 
 					}}
 					/>

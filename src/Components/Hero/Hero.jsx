@@ -45,7 +45,7 @@ const Hero = () => {
 						cursorColor='transparent'
 						text={'MORE ABOUT US'}
 						startDelay={100}
-						typeSpeed={50}
+						typeSpeed={10}
 						textStyle={{ 
 						}}
 						/>
@@ -57,8 +57,8 @@ const Hero = () => {
 					<TypeWriterEffect
 					cursorColor='transparent'
 					text={'DESIGN FACTOR'}
-					startDelay={1000}
-					typeSpeed={50}
+					startDelay={400}
+					typeSpeed={10}
 					textStyle={{ 
 					}}
 					/>

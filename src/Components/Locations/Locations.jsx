@@ -7,8 +7,14 @@ import point from "../../Images/Logo/part5.png"
 import './Locations.css'
 const Locations = () => {
 	const [countOn, setCountOn] = useState(false)
-	function openLocationAD(){
-    window.open('https://maps.app.goo.gl/QRh9uhU7cRG4ADhk9','_black').focus()
+	function locationEG(){
+    window.open('https://maps.app.goo.gl/7FzkRu8vmRd9nMtd6','_black').focus()
+}
+	function locationAD(){
+    window.open('https://maps.app.goo.gl/Fymtn2jP7kHHMRQ88','_black').focus()
+}
+	function locationDU(){
+    window.open('https://maps.app.goo.gl/TztzhKiwYkbgAXtm8','_black').focus()
 }
 	const transition1 = {type: 'spring', duration: 2, delay: .2}
 	const transition2 = {type: 'spring', duration: 2, delay: .4}
@@ -24,7 +30,7 @@ const Locations = () => {
 						cursorColor='transparent'
 						text={'REACH US'}
 						startDelay={100}
-						typeSpeed={50}
+						typeSpeed={10}
 						textStyle={{ 
 						}}
 						/>
@@ -36,8 +42,8 @@ const Locations = () => {
 					<TypeWriterEffect
 					cursorColor='transparent'
 					text={'Our Locations'}
-					startDelay={500}
-					typeSpeed={50}
+					startDelay={400}
+					typeSpeed={10}
 					textStyle={{ 
 					}}
 					/>
@@ -48,7 +54,7 @@ const Locations = () => {
 				<img src={worldMap} alt='map' className='map-img'/>
 				<motion.div
 				className='map-pin pin-one'
-				onClick={openLocationAD}
+				onClick={locationEG}
 				title='Egypt Branch'
 				initial={{y:-100, rotate:-45, opacity:-1}}
 				whileInView={{y: [-200, 100, 0], rotate:-45, opacity:1}}
@@ -56,7 +62,7 @@ const Locations = () => {
 				></motion.div>
 				<motion.div 
 				className='map-pin pin-two' 
-				onClick={openLocationAD} 
+				onClick={locationDU} 
 				title='Dubai Branch'
 				initial={{y:-100, rotate:-45, opacity:-1}}
 				whileInView={{y: [-200, 100, 0], rotate:-45, opacity:1}}
@@ -64,7 +70,7 @@ const Locations = () => {
 				></motion.div>
 				<motion.div 
 				className='map-pin pin-three' 
-				onClick={openLocationAD} 
+				onClick={locationAD} 
 				title='Abu Dhabi Branch'
 				initial={{y:-100, rotate:-45, opacity:-1}}
 				whileInView={{y: [-200, 100, 0], rotate:-45, opacity:1}}
