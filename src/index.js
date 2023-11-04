@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import NavBar from './Components/NavBar/NavBar';
+import { FilesContextProvider } from './Context/FilesContext';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 import './index.css';
+import SendInquiry from './Components/SendInquiry/SendInquiry';
 import App from './Components/App/App';
 import Main from './routes/Main';
 import Appliances from './routes/Categories/Appliances/Appliances';
@@ -24,22 +26,25 @@ import Project from './routes/Project'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <NavBar/>
-      <Routes>
-        <Route path="/" element={<App/>} />
-        <Route path="Main" element={<Main/>} />
-        <Route path="ceramics" element={<Ceramics/>} />
-        <Route path="Appliances" element={<Appliances/>} />
-        <Route path="Curtains" element={<Curtains/>} />
-        <Route path="Doors" element={<Doors/>} />
-        <Route path="Fitout" element={<Fitout/>} />
-        <Route path="Furniture" element={<Furniture/>} />
-        <Route path="Gym" element={<Gym/>} />
-        <Route path="Marble" element={<Marble/>} />
-        <Route path="Sanitary" element={<Sanitary/>} />
-        <Route path="Sockets" element={<Sockets/>} />
-        <Route path="Project" element={<Project/>} />
-      </Routes>
-  </BrowserRouter>
+  <FilesContextProvider>
+    <BrowserRouter>
+      <NavBar/>
+      <SendInquiry/>
+        <Routes>
+          <Route path="/" element={<App/>} />
+          <Route path="Main" element={<Main/>} />
+          <Route path="ceramics" element={<Ceramics/>} />
+          <Route path="Appliances" element={<Appliances/>} />
+          <Route path="Curtains" element={<Curtains/>} />
+          <Route path="Doors" element={<Doors/>} />
+          <Route path="Fitout" element={<Fitout/>} />
+          <Route path="Furniture" element={<Furniture/>} />
+          <Route path="Gym" element={<Gym/>} />
+          <Route path="Marble" element={<Marble/>} />
+          <Route path="Sanitary" element={<Sanitary/>} />
+          <Route path="Sockets" element={<Sockets/>} />
+          <Route path="Project" element={<Project/>} />
+        </Routes>
+    </BrowserRouter>
+  </FilesContextProvider>
 );

@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+import {React, useEffect, useState} from "react";
+import { useFiles } from '../../../Context/FilesContext';
 import { motion } from "framer-motion";
 import NumberCounter from 'number-counter';
 import heart from '../../../Images/Categories/heart.png';
@@ -27,7 +28,10 @@ import '../../Categories.css'
 export default function Gym() {
 	const transition1 = {type: 'spring', duration: 3}
 	const transition2 = {type: 'spring', duration: 3}
-	const [count,setCount] = React.useState(0)
+	const [count,setCount] = useState(0)
+	// useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 	let timonials = testimonialsData[count]
 	const rightHandle=() => {
 			setCount(prevCount => prevCount + 1)
@@ -41,6 +45,11 @@ export default function Gym() {
 					setCount(prevCount => prevCount = 2)
 			}
 	}
+	const { toggleInquiry } = useFiles();
+
+  const handleToggle = () => {
+    toggleInquiry(true);
+  };
 	const gymCatalogue = () => {
 		window.open('https://drive.google.com/uc?export=download&id=1QkOafwmfP4ymBhQ4igfN8pMf77Lxxoff','_black').focus()
 	}
@@ -84,7 +93,7 @@ return (
 							</div>
 						</div>
 						<div>
-							<button className='btn-ch btn-color-ch'>Send Inquiry</button>
+							<button className='btn-ch btn-color-ch' onClick={handleToggle}>Send Inquiry</button>
 							<button className='btn-ch btn-color-ch transparent-ch' onClick={gymCatalogue}>Gym Catalogue</button>
 						</div>
 					</div>

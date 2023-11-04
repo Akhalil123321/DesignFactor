@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+.send-inquiry-cont-open, .send-inquiry-cont-close{
+  position: fixed;
+  font-family: 'Poppins',sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  display: flex;
+}
+  .send-inquiry-cont-close{
+    display: none;
+  }
+  .send-inquiry-cont-open{
+    display: flex;
+  }
+  .blur-back{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  filter:blur(4px);
+  width: 100%;
+	position: fixed;
+  z-index: 1;
+  backdrop-filter: blur(.7rem); 
+  background-color: rgba(0, 0, 0, 0.2); 
+  display: flex;
+  overflow: scroll;
+}
+.send-inquiry-cont-ch{
+  z-index: 2;
+  position: relative;
+  width: 60%;
+  min-height: 90vh;
+  background: #1b1b1b;
+  padding: 40px 3.3rem 4rem;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 1px #272727;
+  display: flex;
+
+}
+.inquiry-form-left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inquiry-form-left-img{
+  width: 80%;
+  filter: blur(.02rem);
+}
+.inquiry-form-right{
+  flex: 1 ;
+  height: 100%;
+}
+.inquiry-form-right-title{
+  font-size: 2rem;
+  color: #c7c7c7;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.inquiry-form-right-form{
+  margin-top: 2rem;
+}
+.inquiry-form-right-field{
+  margin-top: 1.2rem;
+  display: flex;
+}
+.inquiry-form-right-field .fas{
+  height: 3rem;
+  width: 4rem;
+  color: #868686;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  border: 1px solid #1f1818;
+  border-right: none;
+  border-radius: .3rem 0 0 .3rem;
+  background: linear-gradient(#333,#222);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inquiry-form-right-icon{
+  margin: auto;
+  fill: #868686;
+}
+.inquiry-form-right-input,.inquiry-form-right-button{
+  height: 3rem;
+  width: 100%;
+  outline: none;
+  font-size: 1.2rem;
+  color: #868686;
+  padding: 0 .8rem;
+  border-radius: 0 .3rem .3rem 0;
+  border: 1px solid #444;
+  caret-color: rgb(233, 182, 53);
+  background: linear-gradient(#333,#222);
+}
+.inquiry-form-right-textarea{
+  height: 10rem;
+}
+.inquiry-form-right-input:focus{
+  color: #868686;
+  box-shadow: 0 0 .3rem rgba(233, 182, 53, 0.2),
+              inset 0 0 .3rem rgba(233, 182, 53, 0.1);
+  background: linear-gradient(rgba(233, 182, 53, 0.08),rgba(233, 182, 53, 0.04));
+  animation: glow .8s ease-out infinite alternate;
+}
+@keyframes glow {
+   0%{
+    border-color: rgb(233, 182, 53);
+    box-shadow: 0 0 .3rem rgba(233, 182, 53, 0.2),
+                inset 0 0 .3rem rgba(0,0,0,.1);
+  }
+   100%{
+    border-color: rgb(241, 185, 46);
+    box-shadow: 0 0 1.2rem rgba(233, 182, 53, 0.6),
+                inset 0 0 .7rem rgba(233, 182, 53, 0.6);
+  }
+}
+.inquiry-form-right-button{
+  margin-top: 2rem;
+  border-radius: .3rem!important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.inquiry-form-right-button:hover{
+  color: rgb(233, 182, 53);
+  border: 1px solid rgb(233, 182, 53);
+  box-shadow: 0 0 .3rem rgba(233, 182, 53, 0.3),
+              0 0 .7rem rgba(233, 182, 53, 0.2),
+              0 0 1.3rem rgba(233, 182, 53, 0.1),
+              0 2px 0 black;
+}
+.menu-close-icon{
+  fill: var(--wightColor);
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem
+}
+.menu-close-icon:hover{
+  fill: var(--secondcolor);
+  cursor: pointer;
+}
+@media screen and (max-width:900px) {
+  .inquiry-form-left{
+    display: none;
+  }
+}
+@media screen and (max-width:512px) {
+  .inquiry-form-right-title{
+    font-size: 1.3rem;
+  }
+  .send-inquiry-cont-ch{
+    width: 90%;
+  }
+  .inquiry-form-right-input,.inquiry-form-right-button{
+    font-size: 1rem;
+  }
+}

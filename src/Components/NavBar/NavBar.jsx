@@ -6,7 +6,9 @@ import { FaAngleDown } from "react-icons/fa6";
 import enLanguage from '../../Images/ENLanguage.png'
 import arLanguage from '../../Images/ARLanguage.png'
 import { FaCouch } from "react-icons/fa";
+import { FaUsersCog } from "react-icons/fa";
 import { FaBorderAll } from "react-icons/fa6";
+import { FaScrewdriverWrench } from "react-icons/fa6";
 import { RiFridgeFill } from "react-icons/ri";
 import { GiElectricalSocket } from "react-icons/gi";
 import { CgGym } from "react-icons/cg";
@@ -18,8 +20,8 @@ import { BsBuildings } from "react-icons/bs";
 import { BiSolidHome } from "react-icons/bi";
 import "./NavBar.css"
 import part1 from "../../Images/Logo/part1.png";
-import part2 from "../../Images/Logo/part6.png";
-import part3 from "../../Images/Logo/part5.png";
+import part2 from "../../Images/Logo/part2.png";
+import part3 from "../../Images/Logo/part3.png";
 
 const NavBar = () => {
   const [list, setList] = useState(false);
@@ -183,6 +185,7 @@ const NavBar = () => {
         </div>
           <div className='space-width'></div>
         <div className={`${categoriesCircle} ${catListScroll}`}>
+          <Link to="/Maintenance"><div className={`Maintenance-box ${catCircleAll} ${furnitureStateIcon}`} ><FaScrewdriverWrench className='cat-icon'/><span className='cat-text Maintenance-box'>Maintenance</span></div></Link>
           <Link to="/Furniture"><div className={`furniture-box ${catCircleAll} ${furnitureStateIcon}`} ><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
           <Link to="/Appliances"><div className={`Appliances-box ${catCircleAll} ${appliancesStateIcon}`} ><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
           <Link to="/ceramics"><div className={`Ceramics-box ${catCircleAll} ${ceramicsStateIcon}`} ><FaBorderAll className='cat-icon'/><span className='cat-text'>Ceramics</span></div></Link>
@@ -194,6 +197,7 @@ const NavBar = () => {
           <Link to="/Fitout"><div className={`Fit-out-box ${catCircleAll} ${fitoutStateIcon}`} ><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
           <Link to="/Marble"><div className={`Marble-box ${catCircleAll} ${marbleStateIcon}`} ><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
           <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll} ${curtinStateIcon}`} ><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
+          <Link to="/Accessories"><div className={`Accessories-box ${catCircleAll} ${curtinStateIcon}`} ><FaUsersCog className='cat-icon'/><span className='cat-text Accessories-box'>Accessories</span></div></Link>
         </div>
           <Link to="/Main" className='nav-logo-cont' onClick={() => setCategories(false)}>
           {/* <span class="go-main-text">Home Page</span> */}

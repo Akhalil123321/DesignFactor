@@ -13,6 +13,7 @@ import fitOutImg from '../../Images/Categories/Fit-out/Fit-out.jpg'
 import ceramicsImg from '../../Images/Categories/Ceramics/Ceramics.jpg'
 import SanitaryImg from '../../Images/Categories/Sanitary/Sanitary.jpg'
 import CurtainsImg from '../../Images/Categories/Curtains/Curtain.jpg'
+import MaintenanceImg from '../../Images/Categories/Maintenance/Maintenance.jpg'
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -93,6 +94,14 @@ const Category = (props) => {
   </SwiperSlide>
   <SwiperSlide>
     <div className='categories-img-cont'>
+      <img src={SanitaryImg} alt="slide_image" className='categories-img'/>
+      <Link to="/Sanitary" className='categories-img-shadow'>
+        <p className='categories-img-text'>SANITARY</p>
+      </Link>
+    </div>
+  </SwiperSlide>
+  <SwiperSlide>
+    <div className='categories-img-cont'>
       <img src={fitOutImg} alt="slide_image" className='categories-img'/>
       <Link to="/Fitout" className='categories-img-shadow'>
         <p className='categories-img-text'>FIT-OUT</p>
@@ -109,20 +118,28 @@ const Category = (props) => {
   </SwiperSlide>
   <SwiperSlide>
     <div className='categories-img-cont'>
-      <img src={SanitaryImg} alt="slide_image" className='categories-img'/>
-      <Link to="/Sanitary" className='categories-img-shadow'>
-        <p className='categories-img-text'>SANITARY</p>
-      </Link>
-    </div>
-  </SwiperSlide>
-  <SwiperSlide>
-    <div className='categories-img-cont'>
       <img src={CurtainsImg} alt="slide_image" className='categories-img'/>
       <Link to="/Curtains" className='categories-img-shadow'>
         <p className='categories-img-text'>CURTAINS</p>	
       </Link>
     </div>
   </SwiperSlide>
+  <SwiperSlide>
+    <div className='categories-img-cont'>
+      <img src={MaintenanceImg} alt="slide_image" className='categories-img'/>
+      <Link to="/Maintenance" className='categories-img-shadow'>
+        <p className='categories-img-text'>MAINTENANCE</p>	
+      </Link>
+    </div>
+  </SwiperSlide>
+  {/* <SwiperSlide>
+    <div className='categories-img-cont'>
+      <img src={CurtainsImg} alt="slide_image" className='categories-img'/>
+      <Link to="/Curtains" className='categories-img-shadow'>
+        <p className='categories-img-text'>ACCESSORIES</p>	
+      </Link>
+    </div>
+  </SwiperSlide> */}
   <div className="slider-controler">
     <div className="swiper-button-prev slider-arrow-lift"></div>
     <div className="swiper-button-next slider-arrow-right"></div>

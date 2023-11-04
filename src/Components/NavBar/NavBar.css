@@ -216,15 +216,15 @@
     position: absolute;
 }
 .Image-logo-part-2{
-    width: 6rem;
+    width: 5rem;
     transform:translateX(2.5rem) translateY(1.8rem);
     position: absolute;
 }
 .Image-logo-part-3{
-    width: 1rem;
+    width: .7rem;
     transform: translateX(0);
     position: absolute;
-    transform:translateX(6.9rem) translateY(3.4rem);
+    transform:translateX(6.1rem) translateY(3.25rem);
 }
 .nav-logo-part1-close{
     left:calc(50% - 2.5rem);
@@ -234,19 +234,19 @@
 }
 .nav-logo-part3-close{
     width: 1.5rem;
-    transform: translateX(5.1rem) translateY(3.4rem);
+    transform: translateX(5.13rem) translateY(3.4rem);
     animation: part3AnimationClose 1.7s linear infinite;
     animation-delay: .3s;
 }
 @keyframes part3AnimationClose {
     0%, 100% {
-        transform: translateX(5.1rem) translateY(3.4rem);
+        transform: translateX(5.13rem) translateY(3.4rem);
     }
     25%, 75% {
-        transform: translateX(5.1rem) translateY(1.4rem);
+        transform: translateX(5.13rem) translateY(1.4rem);
     }
     50%{
-        transform: translateX(5.1rem) translateY(2.2rem);
+        transform: translateX(5.13rem) translateY(2.2rem);
     }
 } 
 /* .nav-logo-cont{
@@ -619,9 +619,15 @@ top: calc(50% - .4rem);
     transition-duration: 1s;
     transform: scale(1.1);
 }
+.Maintenance-box{
+    font-size: .6rem;
+}
+.Accessories-box{
+    font-size: .7rem;
+}
 /* Responsive---------------------------------------------------------------- */
 
- @media screen and (max-width:900px) {
+@media screen and (max-width:900px) {
     .nav-contact-cont, 
     .nav-email-cont, 
     .categories-icon-cont,
@@ -644,15 +650,15 @@ top: calc(50% - .4rem);
         position: absolute;
     }
     .Image-logo-part-2{
-        width: 4.7rem;
-        transform:translateX(2rem) translateY(1.4rem);
+        width: 4rem;
+        transform:translateX(2.0rem) translateY(1.5rem);
         position: absolute;
     }
     .Image-logo-part-3{
         width: .6rem;
         transform: translateX(0);
         position: absolute;
-        transform:translateX(5.4rem) translateY(2.85rem);
+        transform:translateX(4.9rem) translateY(2.65rem);
     }
     .nav-logo-part2-close{
         display: none;
@@ -685,7 +691,7 @@ top: calc(50% - .4rem);
     position: absolute;
 }
 .Image-logo-part-2{
-    width: 3.5rem;
+    width: 3.2rem;
     transform:translateX(1.5rem) translateY(1.1rem);
     position: absolute;
 }
@@ -693,7 +699,7 @@ top: calc(50% - .4rem);
     width: .4rem;
     transform: translateX(0);
     position: absolute;
-    transform:translateX(4.2rem) translateY(2.2rem);
+    transform:translateX(3.9rem) translateY(2.1rem);
 }
 @keyframes part3AnimationClose {
     0%, 100% {

@@ -1,8 +1,11 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import "./VideoBackground.css"
 import backVideo from "../../Images/Background.mp4"
 
 const VideoBackground = () => {
+  //   useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <div className='video-back-head'>
       <div className='video-Shadow3'></div>
