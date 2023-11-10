@@ -37,7 +37,7 @@
   z-index: 2;
   position: relative;
   width: 60%;
-  min-height: 90vh;
+  height: 90vh;
   background: #1b1b1b;
   padding: 40px 3.3rem 4rem;
   box-sizing: border-box;
@@ -164,6 +164,7 @@
   }
   .send-inquiry-cont-ch{
     width: 90%;
+    height: 70vh;  
   }
   .inquiry-form-right-input,.inquiry-form-right-button{
     font-size: 1rem;

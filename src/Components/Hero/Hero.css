@@ -1,5 +1,5 @@
 .hero{
-    padding: 0em 5rem 0rem 5rem;
+    padding: 0rem 5rem 0rem 5rem;
 }
 .hero-about-us-container{
     display: flex;
@@ -8,6 +8,7 @@
     justify-content: space-between;
     width: 100%;
     margin-top: 4rem;
+    gap: 8rem;
 }
 .hero-about-us-content1, .hero-about-us-content2{
     width: 45%;
@@ -17,78 +18,194 @@
     justify-content: center;
 }
 .hero-about-us-content1{
-    border-top-left-radius: 10rem;
     position: relative;
-    width: 35%;
+    flex: 1;
 }
 .hero-about-us-content2{
     border-radius: 0rem;
+    flex: 1;
 }
-.hero-circle-360{
+.img-360-1{
+  background-image: url(../../Images//360/large1.png);
+}
+.img-360-2{
+  background-image: url(../../Images//360/small1.png);
+}
+.img-360-3{
+  background-image: url(../../Images//360/large2.png);
+}
+.img-360-4{
+  background-image: url(../../Images//360/small2.png);
+}
+.img-360-5{
+  background-image: url(../../Images//360/large3.png);
+}
+.img-360-6{
+  background-image: url(../../Images//360/small3.png);
+}
+.img-360-7{
+  background-image: url(../../Images//360/large4.png);
+}
+.img-360-8{
+  background-image: url(../../Images//360/small4.png);
+}
+.img-360-9{
+  background-image: url(../../Images//360/large5.png);
+}
+.img-360-10{
+  background-image: url(../../Images//360/small5.png);
+}
+.img-small-style{
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+}
+.img-small-style::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  filter: blur(.8rem);
+  transform: rotateX(65deg);
+  position: absolute;
+  bottom: -10.5rem;
+  border-radius: 50%; 
+  z-index: -1;
+}
+
+/* cards ------------------------------------------- */
+.hero-about-us-content1{
+    width:100%;
+    height:30rem;
+    padding:3.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .img-360{
+    width:20rem;
+    height:20rem;
+    border-radius: 50%;
+    background-position: 50% 50%;
+    display: inline-block;
+    background-size: cover;
+    position: absolute;
+    bottom:-5rem;
+    user-select: none; 
+  }
+  .img-360:nth-child(1){
+    left:0;
+    bottom:0;
+    transform: translate(0,0);
+    border-radius: 0;
+    width:80%;
+    height:37rem;
+    box-shadow: none;
+    border-top-left-radius: 10rem;
+    user-select: none; 
+    cursor: col-resize;
+  }
+  .img-360:nth-child(2){
+    left:56%;
+    user-select: none; 
+  }
+  .img-360:nth-child(n+3){
+    left:calc(50% + 300px);
+    width: 10rem;
+    opacity: 0;
+    user-select: none; 
+  }
+  .img-360 .content{
+    position: absolute;
+    top:45%;
+    left:4rem;
+    width:24rem;
+    text-align: left;
+    padding:0;
+    color:#eee;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+    user-select: none; 
+  }
+  .img-360:nth-child(1) .content{
+    display: block;
+  }
+  .img-360 .name{
+    font-size: 2rem;
+    color: var(--wightColor);
+    font-weight: bold;
+    opacity: 0;
+    animation:showcontent .5s ease-in-out 1 forwards;
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.9);
+    user-select: none; 
+  }
+  .img-360 .des{
+    width: 100%;
+    color: var(--wightColor);
+    margin:20px 0;
+    opacity: 0;
+    animation:showcontent .5s ease-in-out 0.3s 1 forwards;
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.9);
+    user-select: none; 
+
+  }
+  .img-360-button{
+    padding:5px 10px;
+    background-color: var(--wightColor);
+    border:4px solid var(--wightColor);
+    opacity: 0;
+    animation:showcontent .5s ease-in-out 0.6s 1 forwards;
+    user-select: none;
+    box-shadow: 0px 0px 19px rgba(0,0,0,0.9);
+    font-weight: 700;
+  }
+  .img-360-button:hover{
+    background-color: transparent;
+    box-shadow: 0px 0px 19px rgba(0,0,0,0.1);
+    cursor: pointer;
+    color: var(--wightColor);
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.9);
+  }
+  @keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+    }
+  }
+  /* circles -------------------------------------------- */
+  .hor-circle-360{
+    border: 2px solid white;
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    right: -10rem;
-    bottom: -4rem;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
-}
-.hero-circle-360:hover{
-    cursor: pointer;
-}
-.small-img-360{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-.circle-inside-text{
-    width: 100%;
-    height:100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: .5;
-}
-.circle-inside-text span{
-    width: 50%;
-    text-align: center;
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--wightColor);
-    text-shadow: 0px 0px 19px rgba(0,0,0,0.63);
-}
-.hor-circle-360{
-    border: 2px solid white;
-    width: 26rem;
-    height: 26rem;
-    border-radius: 50%;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotateX(70deg);
+    left:56%;
+    bottom:-5rem;
+    transform: scale(1.29) rotateX(65deg);
+    pointer-events: none;
 }
 .ver-circle-360{
     border: 3px solid white;
-    width: 26rem;
-    height: 26rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotateY(65deg);
+    left:56%;
+    bottom:-5rem;
+    transform: scale(1.29) rotateY(60deg);
+    pointer-events: none;
 }
 .hor-circle-360-ball, .ver-circle-360-ball{
     width: .5rem;
@@ -103,47 +220,29 @@
     animation: verSmallBallRotate 7s linear infinite;
 }
 @keyframes horSmallBallRotate { 
-    0% { 
-        transform: rotate(0deg)  
-            translateY(13rem) rotate(0deg); 
-    } 
+  0% { 
+      transform: rotate(0deg)  
+          translateY(10.1rem) rotate(0deg); 
+  } 
 
-    100% { 
-        transform: rotate(360deg) 
-            translateY(13rem) rotate(-360deg);
-    } 
+  100% { 
+      transform: rotate(360deg) 
+          translateY(10.1rem) rotate(-360deg);
+  } 
 } 
 @keyframes verSmallBallRotate { 
-    0% { 
-        transform: rotate(0deg)  
-            translateY(13rem) rotate(0deg); 
-    } 
+  0% { 
+      transform: rotate(0deg)  
+          translateY(10.1rem) rotate(0deg); 
+  } 
 
-    100% { 
-        transform: rotate(360deg)  
-            translateY(13rem) rotate(-360deg); 
-    } 
+  100% { 
+      transform: rotate(360deg)  
+          translateY(10.1rem) rotate(-360deg); 
+  } 
 } 
-.small-img-360-shadow{
-    width: 10%;
-    height: 10%;
-    background-color: rgb(0, 0, 0, .2);
-    position: absolute;
-    border-radius: 50%;
-    bottom: -3rem;
-    transform: rotateX(80deg);
-    box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.8);
-    -webkit-box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.8);
-    -moz-box-shadow: 0px 0px 118px 22px rgba(0,0,0,0.8);
-}
-.large-img-360{
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 10rem;
-}
-.large-img-360:hover{
-    cursor: pointer;
-}
+
+
 .hero-about-us-content2{
     justify-content: start;
     align-items: start;
@@ -211,33 +310,35 @@
     width: 100%;
     height: 100%;
   }
+  /* Responsive ------------------------------------------- */
   @media screen and (max-width:900px) {
     .hero-about-us-container{
         flex-direction: column-reverse;
         width: 100%;
         margin-top: 2rem;
+        gap: 2rem;
     }
     .hero-about-us-content1, .hero-about-us-content2{
         width: 100%;
+        flex: none;
     }
     .hero-about-us-content1{
-        width: 90%;
-        margin-top: 5rem;
+      width: 90%;
     }
-    .hero-circle-360{
-        width: 15rem;
-        height: 15rem;
-        right: -1.5rem;
-        bottom: -3rem;
+    .img-360:nth-child(2){
+      left:53%;
     }
     .hor-circle-360{
-        width: 19rem;
-        height: 19rem;
-    }
+      left:53%;
+      width: 19rem;
+      height: 19rem;
+  }
     .ver-circle-360{
-        width: 19rem;
-        height: 19rem;
-    }
+      left:53%;
+      width: 19rem;
+      height: 19rem;
+  }
+
     @keyframes horSmallBallRotate { 
         0% { 
             transform: rotate(0deg)  
@@ -245,17 +346,17 @@
         } 
         100% { 
             transform: rotate(360deg) 
-                translateY(9.5rem) rotate(-360deg);
+                translateY(9.6rem) rotate(-360deg);
         } 
     } 
     @keyframes verSmallBallRotate { 
         0% { 
             transform: rotate(0deg)  
-                translateY(9.5rem) rotate(0deg); 
+                translateY(9.6rem) rotate(0deg); 
         } 
         100% { 
             transform: rotate(360deg)  
-                translateY(9.5rem) rotate(-360deg); 
+                translateY(9.6rem) rotate(-360deg); 
         } 
     } 
   }
@@ -277,43 +378,98 @@
     .Know-more-bottom-ch{
         font-size: 1rem;
     }
+    .hero-about-us-content1{
+      width: 80%;
+    }
+    .img-360:nth-child(1){
+      height:32rem;
+    }
+    .img-360:nth-child(2){
+      width: 16rem;
+      height: 16rem;
+      left: 50%;
+    }
+    .hor-circle-360{
+      left:50%;
+      width: 15rem;
+      height: 15rem;
   }
+    .ver-circle-360{
+      left:50%;
+      width: 15rem;
+      height: 15rem;
+  }
+  @keyframes horSmallBallRotate { 
+    0% { 
+        transform: rotate(0deg)  
+            translateY(7.48rem) rotate(0deg); 
+    } 
+    100% { 
+        transform: rotate(360deg) 
+            translateY(7.48rem) rotate(-360deg);
+    } 
+} 
+@keyframes verSmallBallRotate { 
+    0% { 
+        transform: rotate(0deg)  
+            translateY(7.48rem) rotate(0deg); 
+    } 
+    100% { 
+        transform: rotate(360deg)  
+            translateY(7.48rem) rotate(-360deg); 
+    } 
+} 
+.img-360:nth-child(1) .content{
+  display: none;
+}
+}
   @media screen and (max-width:420px){
     .hero-circle-360{
         width: 12rem;
         height: 12rem;
     }
+    .hero-about-us-content1{
+      height:20rem;
+    }
+    .img-360:nth-child(1){
+      width: 80%;
+      height: 28rem;
+    }
+    .img-360:nth-child(2){
+      width: 13rem;
+      height: 13rem;
+      left: 48%;
+    }
     .hor-circle-360{
-        width: 14rem;
-        height: 14rem;
-    }
+        width: 13rem;
+        height: 13rem;
+        left: 48%;
+      }
     .ver-circle-360{
-        width: 14rem;
-        height: 14rem;
-    }
+        width: 13rem;
+        height: 13rem;
+        left: 48%;
+      }
     @keyframes horSmallBallRotate { 
         0% { 
             transform: rotate(0deg)  
-                translateY(7rem) rotate(0deg); 
+                translateY(6.5rem) rotate(0deg); 
         } 
         100% { 
             transform: rotate(360deg) 
-                translateY(7rem) rotate(-360deg);
+                translateY(6.5rem) rotate(-360deg);
         } 
     } 
     @keyframes verSmallBallRotate { 
         0% { 
             transform: rotate(0deg)  
-                translateY(7rem) rotate(0deg); 
+                translateY(6.5rem) rotate(0deg); 
         } 
         100% { 
             transform: rotate(360deg)  
-                translateY(7rem) rotate(-360deg); 
+                translateY(6.5rem) rotate(-360deg); 
         } 
     } 
-    .circle-inside-text span{
-        font-size: 1rem;
-    }
   }
   @media screen and (max-width:350px){
     .hero-about-us-content2-text1 {
@@ -324,4 +480,46 @@
         width: 100%;
         font-size: .8rem;
     }
+    .hero-about-us-content1{
+      height:18rem;
+    }
+    .img-360:nth-child(1){
+      width: 80%;
+      height: 25rem;
+    }
+    .img-360:nth-child(2){
+      width: 11rem;
+      height: 11rem;
+      left: 48%;
+    }
+    .hor-circle-360{
+        width: 11rem;
+        height: 11rem;
+        left: 48%;
+      }
+    .ver-circle-360{
+        width: 11rem;
+        height: 11rem;
+        left: 48%;
+      }
+    @keyframes horSmallBallRotate { 
+        0% { 
+            transform: rotate(0deg)  
+                translateY(5.6rem) rotate(0deg); 
+        } 
+        100% { 
+            transform: rotate(360deg) 
+                translateY(5.6rem) rotate(-360deg);
+        } 
+    } 
+    @keyframes verSmallBallRotate { 
+        0% { 
+            transform: rotate(0deg)  
+                translateY(5.6rem) rotate(0deg); 
+        } 
+        100% { 
+            transform: rotate(360deg)  
+                translateY(5.6rem) rotate(-360deg); 
+        } 
+    } 
   }
