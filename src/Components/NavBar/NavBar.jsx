@@ -71,26 +71,12 @@ const NavBar = () => {
   const catCircleAll = categories? 'cat-circle-all-o' : 'cat-circle-all'
   const homeButtonState = homeState? 'appear-home-button' : 'disable-home-button'
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-        setCategories(false)
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  const languageHandleClick = () => {
-    setLanguageClicked(true);
-    setTimeout(() => {
-      setLanguageClicked(false);
-    }, 1000);
-  }
+  // const languageHandleClick = () => {
+  //   setLanguageClicked(true);
+  //   setTimeout(() => {
+  //     setLanguageClicked(false);
+  //   }, 1000);
+  // }
   const scrollState = scrolled ? 'nav-scroll-down' : 'nav-scroll-up'
   const logoState1 = scrolled ? 'nav-logo-parts nav-logo-part1-close' : 'nav-logo-parts nav-logo-part1'
   const logoState2 = scrolled ? 'nav-logo-part2-close' : 'nav-logo-part2'
@@ -185,19 +171,19 @@ const NavBar = () => {
         </div>
           <div className='space-width'></div>
         <div className={`${categoriesCircle} ${catListScroll}`}>
-          <Link to="/Maintenance"><div className={`Maintenance-box ${catCircleAll} ${furnitureStateIcon}`} ><FaScrewdriverWrench className='cat-icon'/><span className='cat-text Maintenance-box'>Maintenance</span></div></Link>
-          <Link to="/Furniture"><div className={`furniture-box ${catCircleAll} ${furnitureStateIcon}`} ><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
-          <Link to="/Appliances"><div className={`Appliances-box ${catCircleAll} ${appliancesStateIcon}`} ><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
-          <Link to="/ceramics"><div className={`Ceramics-box ${catCircleAll} ${ceramicsStateIcon}`} ><FaBorderAll className='cat-icon'/><span className='cat-text'>Ceramics</span></div></Link>
-          <Link to="/Sanitary"><div className={`Sanitary-box ${catCircleAll} ${sanitaryStateIcon}`} ><FaToilet className='cat-icon'/><span className='cat-text'>Sanitary</span></div></Link>
-          <Link to="/Sockets"><div className={`Sockets-box ${catCircleAll} ${socketStateIcon}`} ><GiElectricalSocket className='cat-icon'/><span className='cat-text'>Sockets</span></div></Link>
+          <Link to="/Maintenance" onClick={() => setCategories(false)}><div className={`Maintenance-box ${catCircleAll} ${furnitureStateIcon}`} ><FaScrewdriverWrench className='cat-icon'/><span className='cat-text Maintenance-box'>Maintenance</span></div></Link>
+          <Link to="/Furniture" onClick={() => setCategories(false)}><div className={`furniture-box ${catCircleAll} ${furnitureStateIcon}`} ><FaCouch className='cat-icon'/><span className='cat-text'>Furniture</span></div></Link>
+          <Link to="/Appliances" onClick={() => setCategories(false)}><div className={`Appliances-box ${catCircleAll} ${appliancesStateIcon}`} ><RiFridgeFill className='cat-icon'/><span className='cat-text'>Appliances</span></div></Link>
+          <Link to="/ceramics" onClick={() => setCategories(false)}><div className={`Ceramics-box ${catCircleAll} ${ceramicsStateIcon}`} ><FaBorderAll className='cat-icon'/><span className='cat-text'>Ceramics</span></div></Link>
+          <Link to="/Sanitary" onClick={() => setCategories(false)}><div className={`Sanitary-box ${catCircleAll} ${sanitaryStateIcon}`} ><FaToilet className='cat-icon'/><span className='cat-text'>Sanitary</span></div></Link>
+          <Link to="/Sockets" onClick={() => setCategories(false)}><div className={`Sockets-box ${catCircleAll} ${socketStateIcon}`} ><GiElectricalSocket className='cat-icon'/><span className='cat-text'>Sockets</span></div></Link>
           <Link to="/Main" onClick={() => setCategories(false)} className={homeButtonState}><div className={`Home-box ${catCircleAll}`} ><BiSolidHome className='cat-icon-home'/><span className='cat-text-home'>Home</span></div></Link>
-          <Link to="/Gym"><div className={`GYM-box ${catCircleAll} ${gymStateIcon}`} ><CgGym className='cat-icon'/><span className='cat-text'>GYM</span></div></Link>
-          <Link to="/Doors"><div className={`Doors-box ${catCircleAll} ${doorStateIcon}`} ><BsDoorOpenFill className='cat-icon'/><span className='cat-text'>Doors</span></div></Link>
-          <Link to="/Fitout"><div className={`Fit-out-box ${catCircleAll} ${fitoutStateIcon}`} ><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
-          <Link to="/Marble"><div className={`Marble-box ${catCircleAll} ${marbleStateIcon}`} ><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
-          <Link to="/Curtains"><div className={`Curtains-box ${catCircleAll} ${curtinStateIcon}`} ><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
-          <Link to="/Accessories"><div className={`Accessories-box ${catCircleAll} ${curtinStateIcon}`} ><FaUsersCog className='cat-icon'/><span className='cat-text Accessories-box'>Accessories</span></div></Link>
+          <Link to="/Gym" onClick={() => setCategories(false)}><div className={`GYM-box ${catCircleAll} ${gymStateIcon}`} ><CgGym className='cat-icon'/><span className='cat-text'>GYM</span></div></Link>
+          <Link to="/Doors" onClick={() => setCategories(false)}><div className={`Doors-box ${catCircleAll} ${doorStateIcon}`} ><BsDoorOpenFill className='cat-icon'/><span className='cat-text'>Doors</span></div></Link>
+          <Link to="/Fitout" onClick={() => setCategories(false)}><div className={`Fit-out-box ${catCircleAll} ${fitoutStateIcon}`} ><BsBuildings className='cat-icon'/><span className='cat-text'>Fit-out</span></div></Link>
+          <Link to="/Marble" onClick={() => setCategories(false)}><div className={`Marble-box ${catCircleAll} ${marbleStateIcon}`} ><GiMarbles className='cat-icon'/><span className='cat-text'>Marble</span></div></Link>
+          <Link to="/Curtains" onClick={() => setCategories(false)}><div className={`Curtains-box ${catCircleAll} ${curtinStateIcon}`} ><GiTheaterCurtains className='cat-icon'/><span className='cat-text'>Curtains</span></div></Link>
+          <Link to="/Accessories" onClick={() => setCategories(false)}><div className={`Accessories-box ${catCircleAll} ${curtinStateIcon}`} ><FaUsersCog className='cat-icon'/><span className='cat-text Accessories-box'>Accessories</span></div></Link>
         </div>
           <Link to="/Main" className='nav-logo-cont' onClick={() => setCategories(false)}>
           {/* <span class="go-main-text">Home Page</span> */}

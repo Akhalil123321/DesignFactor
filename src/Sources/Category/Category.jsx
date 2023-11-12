@@ -44,7 +44,7 @@ const Category = (props) => {
     modules={[EffectCoverflow, Pagination, Navigation]}
     className="swiper_container"
   >
-  <SwiperSlide>
+  <SwiperSlide >
     <div className='categories-img-cont'>
       <img src={Furnitures} alt="slide_image" className='categories-img'/>
       <Link to="/Furniture" className='categories-img-shadow'>

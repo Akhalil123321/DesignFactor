@@ -46,7 +46,8 @@
     background-color:#ffffff;
     padding: .7rem 1.4rem;
     margin-right: 1rem;
-	border: 2px solid #ffffff;
+		border: 2px solid #ffffff;
+		font-weight: 600;
 
 }
 .btn-color-ch{
@@ -108,7 +109,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 100%;
+		box-sizing: border-box;
 }
 .projects-list-r-ch{
     font-size: 1rem;
@@ -118,8 +119,10 @@
 }
 .projects-title-ch{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.2rem;
+		align-items: center;
+		justify-content: flex-start;
 }
 .projects-des-cont-ch{
     display: flex;
@@ -200,7 +203,7 @@
     .projects-des-r-ch{
         align-items: center;
         justify-content: center;
-        width: 90%;
+        width: 100%;
     }
     .project-img-ch{
         position:unset;
@@ -240,7 +243,7 @@ main{
 		width: 75%;
 		display: flex;
 		flex-direction: column;
-		gap: 1.7rem;
+		gap: 2.7rem;
 	}
 	.hero-r-side-ch{
 		width: 25%;
@@ -313,7 +316,7 @@ main{
 		text-transform: none;
 	}
 	.score-n2-ch{
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 	.hero-img-ch{
 		width: 23rem;
@@ -403,7 +406,7 @@ main{
 			text-transform: none;
 		}
 		.score-n2-ch{
-			font-size: 1.6rem;
+			font-size: .8rem;
 		}
 		.hero-img-ch{
 			width: 20rem;
@@ -584,28 +587,37 @@ main{
 .contact-us-cont-ch{
     display: flex;
     gap: 4rem;
+		align-items: center;
+		justify-content: center;
 }
 .foot-icon-ch{
-    font-size: 2.3rem;
+    font-size: 2.1rem;
 	fill: var(--wightColor);
 }
 .foot-icon-in{
-	font-size: 2.2rem;
+	font-size: 2.0rem;
 	fill: var(--wightColor);
 }
-.foot-icon-in:hover{
+.foot-icon-in:hover, .foot-icon-ch:hover, .foot-icon-ch-fa:hover, .foot-icon-ch-ln:hover{
 	fill: var(--secondcolor);
 }
-.foot-icon-ch:hover{
-	fill: var(--secondcolor);
+.foot-icon-ch-yt:hover{
+	stroke: var(--secondcolor);
 }
 .foot-icon-ch-ln{
-    font-size: 2.3rem;
+    font-size: 2.6rem;
+		fill: var(--wightColor);
+		stroke: var(--wightColor);
+}
+.foot-icon-ch-yt{
+	font-size: 2.4rem;
 	fill: none;
 	stroke: var(--wightColor);
 }
-.foot-icon-ch-ln:hover{
-	stroke: var(--secondcolor);
+.foot-icon-ch-fa{
+	font-size: 2.6rem;
+	fill: var(--wightColor);
+	stroke: var(--wightColor);
 }
 .footer-blur-ch {
     width: 15rem;

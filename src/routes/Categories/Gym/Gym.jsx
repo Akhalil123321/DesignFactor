@@ -9,21 +9,21 @@ import hero from '../../../Images/Categories/hero_image.png';
 import calories from '../../../Images/Categories/calories.png';
 import heroBackground from '../../../Images/Categories/hero_image_back.png';
 import leftArrow from '../../../Images/Categories/leftArrow.png';
-import testimonialsData from '../../../Data/ProjectsData.js';
-import image1 from '../../../Images/Categories/image1.png';
-import image2 from '../../../Images/Categories/image2.png';
-import image3 from '../../../Images/Categories/image3.png';
-import image4 from '../../../Images/Categories/image4.png';
+import {gymData} from '../../../Data/ProjectsData.js';
+import image1 from '../../../Images/Categories/GYM/cards/image1.png';
+import image2 from '../../../Images/Categories/GYM/cards/image2.png';
+import image3 from '../../../Images/Categories/GYM/cards/image3.png';
+import image4 from '../../../Images/Categories/GYM/cards/image4.png';
 import tick from '../../../Images/Categories/tick.png';
-import nb from '../../../Images/Categories/nb.png';
-import nike from '../../../Images/Categories/nike.png';
-import adidas from '../../../Images/Categories/adidas.png';
+import nb from '../../../Images/Categories/GYM/brands/brand1.png';
+import nike from '../../../Images/Categories/GYM/brands/brand2.png';
+import adidas from '../../../Images/Categories/GYM/brands/brand3.png';
 import logo from '../../../Images/Logo/Full Logo.png';
 import { GrInstagram } from "react-icons/gr";
-import { LuLinkedin } from "react-icons/lu";
+import { LiaLinkedin } from "react-icons/lia";
 import { SiWhatsapp } from "react-icons/si";
 import { FiYoutube } from "react-icons/fi";
-import { FiFacebook } from "react-icons/fi";
+import { LiaFacebookSquare } from "react-icons/lia";
 import '../../Categories.css'
 export default function Gym() {
 	const transition1 = {type: 'spring', duration: 3}
@@ -32,10 +32,10 @@ export default function Gym() {
 	// useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
-	let timonials = testimonialsData[count]
+	let gymEquData = gymData[count]
 	const rightHandle=() => {
 			setCount(prevCount => prevCount + 1)
-			if(count >= 2){
+			if(count >= 7){
 					setCount(prevCount => prevCount = 0)
 			}
 	}    
@@ -66,30 +66,30 @@ return (
 							transition={{...transition1, type:'tween'}}
 							>
 							</motion.div>
-							<span >THE BEST FITNESS CLUB IN THE TOWN</span>
+							<span >UNLEASH EXCELLENCE WITH DESIGN FACTOR</span>
 						</div>
 						<div className='main-title-cont-ch'>
 								<div>
-									<span className='normal-title-ch transparent-title-ch large-ch'>shape </span>
-									<span className='normal-title-ch large-ch'>your</span>
+									<span className='normal-title-ch transparent-title-ch large-ch'>GYM </span>
+									<span className='normal-title-ch large-ch'>EQUIPMENTS</span>
 								</div>
-								<div>
+								{/* <div>
 									<span className='normal-title-ch large-ch'>ideal body</span>
-								</div>
+								</div> */}
 						</div>
-						<p className="dis-text-ch">In here we will help you to shape and build your ideal body and live up your life to fullest</p>
+						<p className="dis-text-ch">WHERE QUALITY MEETS THE BEST COST, DELIVERING AN UNMATCHED EXPERIENCE.</p>
 						<div className='job-counter-cont-ch'>
 							<div className='job-counter-cont-ch'>
-								<span className='job-counter-num-ch'><NumberCounter end={140} start={100} delay='4' preFix='+'/></span>
-								<span className='job-counter-type-ch'>EXPERT COACHES</span>
-							</div>
-							<div className='job-counter-cont-ch'>
-								<span className='job-counter-num-ch'><NumberCounter end={978} start={800} delay='3' preFix='+'/></span>
-								<span className='job-counter-type-ch'>MEMBERS JOINED</span>
+								<span className='job-counter-num-ch'><NumberCounter end={50} start={0} delay='2' preFix='+'/></span>
+								<span className='job-counter-type-ch'>TEXT EXAMPLE</span>
 							</div>
 							<div className='job-counter-cont-ch'>
 								<span className='job-counter-num-ch'><NumberCounter end={50} start={0} delay='2' preFix='+'/></span>
-								<span className='job-counter-type-ch'>FITNESS PROGRAMS</span>
+								<span className='job-counter-type-ch'>TEXT EXAMPLE</span>
+							</div>
+							<div className='job-counter-cont-ch'>
+								<span className='job-counter-num-ch'><NumberCounter end={50} start={0} delay='2' preFix='+'/></span>
+								<span className='job-counter-type-ch'>TEXT EXAMPLE</span>
 							</div>
 						</div>
 						<div>
@@ -106,8 +106,8 @@ return (
 						transition={transition1}
 						>
 							<img src={heart} alt="" />
-							<span className='job-counter-type-ch score-n1-ch'>Heart Rate</span>
-							<span className='job-counter-num-ch score-n2-ch'>116 bpm</span>
+							<span className='job-counter-type-ch score-n1-ch'>Text Example</span>
+							<span className='job-counter-num-ch score-n2-ch'>Text Example</span>
 						</motion.div>
 						<img src={hero} alt="" className='hero-img-ch'/>
 						<motion.img 
@@ -125,8 +125,8 @@ return (
 						className="fly-box-2-ch">
 							<img src={calories} alt="" />
 							<div className="fly-box-2-det-ch">
-								<span className='job-counter-type-ch score-n1-ch'>Calories burned</span>
-								<span className='job-counter-num-ch score-n2-ch'>220 kcal</span>
+								<span className='job-counter-type-ch score-n1-ch'>More Than</span>
+								<span className='job-counter-num-ch score-n2-ch'>text example</span>
 							</div>
 						</motion.div>
 					</div>
@@ -153,22 +153,22 @@ return (
 							<div className="det-list-cont-ch">
 								<div className="det-list-ch">
 									<img src={tick} alt=""/>
-									<span className="dis-text-ch">over 140+ expert coachs</span>
+									<span className="dis-text-ch">We stand out as your premier choice. </span>
 								</div>
 								<div className="det-list-ch">
 									<img src={tick} alt=""/>
-									<span className="dis-text-ch">train smarter and faster than before</span>
+									<span className="dis-text-ch">Our commitment to excellence is reflected in the quality and innovation of our products. </span>
 								</div>
 								<div className="det-list-ch">
 									<img src={tick} alt=""/>
-									<span className="dis-text-ch">1 free program for new member</span>
+									<span className="dis-text-ch">Focus on durability, performance, and customer satisfaction, we provide cutting-edge solutions.</span>
 								</div>
 								<div className="det-list-ch">
 									<img src={tick} alt=""/>
-									<span className="dis-text-ch">reliable partners</span>
+									<span className="dis-text-ch">unmatched reliability,and top-notch service.</span>
 								</div>
 							</div>
-							<span className="our-clients-ch">our partners</span>
+							<span className="our-clients-ch">some of our brands</span>
 							<div className="our-clients-logo-ch">
 								<img src={nb} alt="" className="client-logo-ch"/>
 								<img src={adidas} alt="" className="client-logo-ch"/>
@@ -179,10 +179,10 @@ return (
 			</section>
 			<section className="projects-list-cont-ch">
 				<div className="projects-list-r-ch">
-					<div className="projects-list-ch">testimonials</div>
+					<div className="projects-list-ch">COMMODITIES</div>
 					<div className='projects-title-ch'>
-						<span className='normal-title-ch transparent-title-ch' >what they</span>
-						<span className="normal-title-ch">say about us</span>
+						<span className='normal-title-ch transparent-title-ch'>OUR</span>
+						<span className="normal-title-ch">PRODUCTS</span>
 					</div>
 					<div className="projects-des-cont-ch">
 						<div className="projects-des-l-ch">
@@ -194,11 +194,11 @@ return (
 							exit= {{opacity:0, x:100}}
 							transition={transition2}
 							>
-								{timonials.review}
+								{gymEquData.review}
 							</motion.div>
 							<div className="projects-client-ch">
-								<span>{timonials.name}</span>
-								<span> - {timonials.status}</span>
+								<span>{gymEquData.name}</span>
+								<span> - {gymEquData.status}</span>
 							</div>
 						</div>
 					</div>
@@ -219,7 +219,7 @@ return (
 					>
 					</motion.div>
 					<motion.img 
-					src={timonials.image} 
+					src={gymEquData.image} 
 					alt="" 
 					className="project-img-ch" 
 					key={count}
@@ -240,9 +240,9 @@ return (
 				<div className="contact-us-cont-ch">
 					<a href="https://instagram.com/arc.ramez?igshid=NjIwNzIyMDk2Mg==" target='_blank' title='Instagram' rel="noreferrer"><GrInstagram className='foot-icon-in'/></a>
 					<a href="https://api.whatsapp.com/send?phone=971501272852" target='_blank' title='Whatsapp' rel="noreferrer"><SiWhatsapp className='foot-icon-ch'/></a>
-					<a href="#" target='_blank' title='Youtube' rel="noreferrer"><FiYoutube className='foot-icon-ch-ln'/></a>
-					<a href="https://www.facebook.com/ramez.eg.uae.tur.sa/" target='_blank' title='Facebook' rel="noreferrer"><FiFacebook className='foot-icon-ch-ln'/></a>
-					<a href="#" target='_blank' title='Linkedin' rel="noreferrer" ><LuLinkedin className='foot-icon-ch-ln'/></a>
+					<a href="#" target='_blank' title='Youtube' rel="noreferrer"><FiYoutube className='foot-icon-ch-yt'/></a>
+					<a href="https://www.facebook.com/ramez.eg.uae.tur.sa/" target='_blank' title='Facebook' rel="noreferrer"><LiaFacebookSquare className='foot-icon-ch-fa'/></a>
+					<a href="#" target='_blank' title='Linkedin' rel="noreferrer" ><LiaLinkedin className='foot-icon-ch-ln'/></a>
 				</div>
 				<img src={logo} alt="" className="company-logo-ch"/>
 			</footer>

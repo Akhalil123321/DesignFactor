@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import ScrollTrigger from 'react-scroll-trigger';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ const Hero = () => {
   const [countOn, setCountOn] = useState(false)
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(0);
   const imagesToMove = 2;
 
   const open360N1 = () => {
@@ -36,31 +37,54 @@ const handleMouseDown = (e) => {
 const handleMouseMove = (e) => {
   if (isDragging) {
     const draggedDistance = e.clientX - dragStartX;
-    const movementThreshold = 50 * imagesToMove;
-
-    if (draggedDistance > movementThreshold) {
-      moveImagesToLeft(imagesToMove);
-      setIsDragging(false);
-    } else if (draggedDistance < -movementThreshold) {
-      moveImagesToRight(imagesToMove);
-      setIsDragging(false);
-    }
+    handleDraggedDistance(draggedDistance);
   }
 };
+
+const handleTouchStart = (e) => {
+  setIsDragging(true);
+  setTouchStartX(e.touches[0].clientX);
+};
+
+const handleTouchMove = (e) => {
+  if (isDragging) {
+    const draggedDistance = e.touches[0].clientX - touchStartX;
+    handleDraggedDistance(draggedDistance);
+  }
+};
+
+const handleDraggedDistance = (draggedDistance) => {
+  const movementThreshold = 60 * imagesToMove;
+
+  if (draggedDistance > movementThreshold) {
+    moveImagesToLeft(imagesToMove);
+    setIsDragging(false);
+  } else if (draggedDistance < -movementThreshold) {
+    moveImagesToRight(imagesToMove);
+    setIsDragging(false);
+  }
+};
+
+const handleMouseUp = () => {
+  setIsDragging(false);
+};
+
+const handleTouchEnd = () => {
+  setIsDragging(false);
+};
+
 const moveImagesToRight = (count) => {
   let lists = document.querySelectorAll('.img-360');
   for (let i = 0; i < count; i++) {
     document.getElementById('slide').appendChild(lists[i]);
   }
 };
+
 const moveImagesToLeft = (count) => {
   let lists = document.querySelectorAll('.img-360');
   for (let i = lists.length - 1; i >= lists.length - count; i--) {
     document.getElementById('slide').prepend(lists[i]);
   }
-};
-const handleMouseUp = () => {
-  setIsDragging(false);
 };
 
   return (
@@ -98,55 +122,59 @@ const handleMouseUp = () => {
       <div className="hero-about-us-content1">
         <div 
         id="slide"
+        onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         >
-            <div className="img-360 img-360-1" onMouseDown={handleMouseDown}>
+            <div className="img-360 img-360-1" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
                 <div className="content">
                     <div className="name">Project Name</div>
                     <div className="des">Step into a world of wonder with our captivating virtual tour! Explore every corner and detail for our works.</div>
                     <button className='img-360-button' onClick={open360N1}>Virtual Tour</button>
                 </div>
             </div>
-            <div className="img-360 img-360-2 img-small-style" onMouseDown={handleMouseDown} onClick={open360N1}></div>
-            <div className="img-360 img-360-3" onMouseDown={handleMouseDown}>
+            <div className="img-360 img-360-2 img-small-style" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart} onClick={open360N1}></div>
+            <div className="img-360 img-360-3" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
                 <div className="content">
                     <div className="name">Project Name</div>
                     <div className="des">Step into a world of wonder with our captivating virtual tour! Explore every corner and detail for our works.</div>
                     <button className='img-360-button' onClick={open360N2}>Virtual Tour</button>
                 </div>
             </div>
-            <div className="img-360 img-360-4 img-small-style" onMouseDown={handleMouseDown} onClick={open360N2}></div>
-            <div className="img-360 img-360-5" onMouseDown={handleMouseDown}>
+            <div className="img-360 img-360-4 img-small-style" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart} onClick={open360N2}></div>
+            <div className="img-360 img-360-5" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
                 <div className="content">
                     <div className="name">Project Name</div>
                     <div className="des">Step into a world of wonder with our captivating virtual tour! Explore every corner and detail for our works.</div>
                     <button className='img-360-button' onClick={open360N3}>Virtual Tour</button>
                 </div>
             </div>
-            <div className="img-360 img-360-6 img-small-style" onMouseDown={handleMouseDown} onClick={open360N3}></div>
-            <div className="img-360 img-360-7" onMouseDown={handleMouseDown}>
+            <div className="img-360 img-360-6 img-small-style" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart} onClick={open360N3}></div>
+            <div className="img-360 img-360-7" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
                 <div className="content">
                     <div className="name">Project Name</div>
                     <div className="des">Step into a world of wonder with our captivating virtual tour! Explore every corner and detail for our works.</div>
                     <button className='img-360-button' onClick={open360N4}>Virtual Tour</button>
                 </div>
             </div>
-            <div className="img-360 img-360-8 img-small-style" onMouseDown={handleMouseDown} onClick={open360N4}></div>
-            <div className="img-360 img-360-9" onMouseDown={handleMouseDown}>
+            <div className="img-360 img-360-8 img-small-style" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart} onClick={open360N4}></div>
+            <div className="img-360 img-360-9" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
                 <div className="content">
                     <div className="name">Project Name</div>
                     <div className="des">Step into a world of wonder with our captivating virtual tour! Explore every corner and detail for our works.</div>
                     <button className='img-360-button' onClick={open360N5}>Virtual Tour</button>
                 </div>
             </div>
-            <div className="img-360 img-360-10 img-small-style" onMouseDown={handleMouseDown} onClick={open360N5}></div>
+            <div className="img-360 img-360-10 img-small-style" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart} onClick={open360N5}></div>
         </div>
         {/* <div className='small-img-360-shadow'></div> */}
-          <div className='hor-circle-360' onMouseDown={handleMouseDown}>
+          <div className='hor-circle-360' onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
             <div className='hor-circle-360-ball'></div>
           </div>
-          <div className='ver-circle-360' onMouseDown={handleMouseDown}>
+          <div className='ver-circle-360' onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
             <div className='ver-circle-360-ball'></div>
           </div>
     </div>
