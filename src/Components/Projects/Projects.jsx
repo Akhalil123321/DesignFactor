@@ -41,20 +41,6 @@ const Projects = () => {
 			}
 			</div>
 			</ScrollTrigger>
-			{/* <div className='projects-container'>
-				<div className='projects-card projects-card-1'>
-					<img src={projectImg1} className='projects-card-img' alt=''/>
-				</div>
-				<div className='projects-card projects-card-2'>
-					<img src={projectImg2} className='projects-card-img' alt=''/>
-				</div>
-				<div className='projects-card projects-card-3'>
-					<img src={projectImg3} className='projects-card-img' alt=''/>
-				</div>
-				<div className='projects-card projects-card-4'>
-					<img src={projectImg4} className='projects-card-img' alt=''/>
-				</div>
-			</div> */}
 			<div className='projects-card-cont'>
 			<div className='projects-card projects-card-1'>
 				<div className='projects-card-text projects-card-text-1'>AL MARYAH VISTA I</div>

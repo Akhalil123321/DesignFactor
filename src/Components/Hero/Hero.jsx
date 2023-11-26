@@ -54,7 +54,7 @@ const handleTouchMove = (e) => {
 };
 
 const handleDraggedDistance = (draggedDistance) => {
-  const movementThreshold = 60 * imagesToMove;
+  const movementThreshold = 30 * imagesToMove;
 
   if (draggedDistance > movementThreshold) {
     moveImagesToLeft(imagesToMove);
@@ -78,6 +78,8 @@ const moveImagesToRight = (count) => {
   for (let i = 0; i < count; i++) {
     document.getElementById('slide').appendChild(lists[i]);
   }
+  let DotList = document.querySelectorAll('.card-dot-content');
+  document.getElementById('dotsContainer').appendChild(DotList[0]);
 };
 
 const moveImagesToLeft = (count) => {
@@ -85,8 +87,9 @@ const moveImagesToLeft = (count) => {
   for (let i = lists.length - 1; i >= lists.length - count; i--) {
     document.getElementById('slide').prepend(lists[i]);
   }
+  let DotList = document.querySelectorAll('.card-dot-content');
+  document.getElementById('dotsContainer').prepend(DotList[DotList.length - 1]);
 };
-
   return (
     <div className='hero'>
       <ScrollTrigger onEnter={() => setCountOn(true)}>
@@ -170,6 +173,13 @@ const moveImagesToLeft = (count) => {
             </div>
             <div className="img-360 img-360-10 img-small-style" onMouseDown={handleMouseDown} onTouchStart={handleTouchStart} onClick={open360N5}></div>
         </div>
+            <div className='doted-cont' id='dotsContainer'>
+              <span className='card-dot-content yellow-dot'></span>
+              <span className='card-dot-content'></span>
+              <span className='card-dot-content'></span>
+              <span className='card-dot-content'></span>
+              <span className='card-dot-content'></span>
+            </div>
         {/* <div className='small-img-360-shadow'></div> */}
           <div className='hor-circle-360' onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
             <div className='hor-circle-360-ball'></div>

@@ -5,7 +5,7 @@
 }
 html{
   background-color: #ffffff;
-  overflow: overlay;
+  overflow: scroll;
   overflow-x: hidden;
   font-size: 1vmax;
   background-color: var(--Backgroundcolor);
@@ -14,10 +14,10 @@ html{
     width: .5rem;
     border-radius: 10px;
     background-color: transparent;
-    display: unset;
+    display: block;
   }
   ::-webkit-scrollbar-track {
-    display: unset;
+    display: block;
   }
   ::-webkit-scrollbar-thumb {
     background: var(--secondcolor); 

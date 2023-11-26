@@ -6,7 +6,7 @@ import './Category.css'
 import Furnitures from '../../Images/Categories/Furnitures/Furnitures.jpg'
 import Appliances from '../../Images/Categories/Appliances/Appliances.jpg'
 import Doors from '../../Images/Categories/Doors/Doors.jpg'
-import electricSocket from '../../Images/Categories/electricSocket/electricSocket.jpg'
+import Lighting from '../../Images/Categories/Lighting/Lighting.jpg'
 import marbleImg from '../../Images/Categories/Marble/Marble.png'
 import GymImg from '../../Images/Categories/GYM/GYM.png'
 import fitOutImg from '../../Images/Categories/Fit-out/Fit-out.jpg'
@@ -14,6 +14,7 @@ import ceramicsImg from '../../Images/Categories/Ceramics/Ceramics.jpg'
 import SanitaryImg from '../../Images/Categories/Sanitary/Sanitary.jpg'
 import CurtainsImg from '../../Images/Categories/Curtains/Curtain.jpg'
 import MaintenanceImg from '../../Images/Categories/Maintenance/Maintenance.jpg'
+import AccessoriesImg from '../../Images/Categories/Accessories/Accessories.jpg'
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -70,9 +71,9 @@ const Category = (props) => {
   </SwiperSlide>
   <SwiperSlide>
     <div className='categories-img-cont'>
-      <img src={electricSocket} alt="slide_image" className='categories-img'/>
-      <Link to="/Sockets" className='categories-img-shadow'>
-        <p className='categories-img-text'>ELECTRIC SOCKETS</p>
+      <img src={Lighting} alt="slide_image" className='categories-img'/>
+      <Link to="/Lighting" className='categories-img-shadow'>
+        <p className='categories-img-text'>LIGHTING</p>
       </Link>
     </div>
   </SwiperSlide>
@@ -132,14 +133,15 @@ const Category = (props) => {
       </Link>
     </div>
   </SwiperSlide>
-  {/* <SwiperSlide>
+  <SwiperSlide>
     <div className='categories-img-cont'>
-      <img src={CurtainsImg} alt="slide_image" className='categories-img'/>
-      <Link to="/Curtains" className='categories-img-shadow'>
+      <img src={AccessoriesImg} alt="slide_image" className='categories-img'/>
+      <Link to="/Accessories" className='categories-img-shadow'>
         <p className='categories-img-text'>ACCESSORIES</p>	
       </Link>
     </div>
-  </SwiperSlide> */}
+  </SwiperSlide>
+
   <div className="slider-controler">
     <div className="swiper-button-prev slider-arrow-lift"></div>
     <div className="swiper-button-next slider-arrow-right"></div>
