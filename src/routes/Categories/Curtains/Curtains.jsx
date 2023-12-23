@@ -1,11 +1,18 @@
 import React from 'react'
-import "../../Categories.css"
+import MainBranch from '../../../Sources/MainBranch'
+import {CurtainsData} from '../../../Data/ProjectsData'
 
 const Curtains = () => {
+  const branchPage = CurtainsData.mainData.map(catPage => {
+    return <MainBranch
+    key={catPage.id}
+    {...catPage}
+    />
+})
   return (
-    <div className='str-page'>
-      <h1>CURTAINS PAGE UNDER DESIGNING !!</h1>
-    </div>
+  <>
+    {branchPage}
+  </>
   )
 }
 

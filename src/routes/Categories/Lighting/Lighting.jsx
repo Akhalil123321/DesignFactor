@@ -1,11 +1,18 @@
 import React from 'react'
-import "../../Categories.css"
+import MainBranch from '../../../Sources/MainBranch'
+import {LightingData} from '../../../Data/ProjectsData'
 
 const Lighting = () => {
+  const branchPage = LightingData.mainData.map(catPage => {
+    return <MainBranch
+    key={catPage.id}
+    {...catPage}
+    />
+})
   return (
-    <div className='str-page'>
-      <h1>Lighting PAGE UNDER DESIGNING !!</h1>
-    </div>
+  <>
+    {branchPage}
+  </>
   )
 }
 

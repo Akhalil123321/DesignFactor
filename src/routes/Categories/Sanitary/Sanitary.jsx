@@ -1,11 +1,18 @@
 import React from 'react'
-import "../../Categories.css"
+import MainBranch from '../../../Sources/MainBranch'
+import {SanitaryData} from '../../../Data/ProjectsData'
 
 const Sanitary = () => {
+  const branchPage = SanitaryData.mainData.map(catPage => {
+    return <MainBranch
+    key={catPage.id}
+    {...catPage}
+    />
+})
   return (
-    <div className='str-page'>
-      <h1>SANITARY PAGE UNDER DESIGNING !!</h1>
-    </div>
+  <>
+    {branchPage}
+  </>
   )
 }
 

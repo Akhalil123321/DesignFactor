@@ -20,15 +20,16 @@ const Tail = () => {
         </div>
         <div className='tail-container-det tail-container-det2'>
           <span className='tail-container-det-title'>Projects</span>
-          <div className='tail-container-det-dis'>
-            <span className='tail-container-det-dis-text'>Maryah Vista I </span>
-          </div>
+            <span className='tail-container-det-dis-text'>Maryah Vista I</span>
+            <span className='tail-container-det-dis-text'>The Gate</span>
+            <span className='tail-container-det-dis-text'>Oasis Two</span>
+            <span className='tail-container-det-dis-text'>Rukan Lofts</span>
         </div>
         <div className='tail-container-det tail-container-det3'>
         <span className='tail-container-det-title'>Communities</span>
-          <div className='tail-container-det-dis'>
             <span className='tail-container-det-dis-text'>Al Maryah Island</span>
-          </div>
+            <span className='tail-container-det-dis-text'>Masdar City</span>
+            <span className='tail-container-det-dis-text'>Dubailand</span>
         </div>
         {/* <div className='tail-container-det tail-container-det4'>Text Area</div> */}
       </div>

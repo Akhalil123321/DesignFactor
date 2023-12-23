@@ -836,6 +836,15 @@ top: calc(50% - .4rem);
         transform: translateX(3rem) translateY(1.2rem);
     }
 } 
+.circle-list-ul-all li{
+    font-size: 2rem;
+}
+.circle-list-ul-one-open li, .circle-list-ul-one-close li {
+    font-size: 1.5rem;
+}
+.circle-list-ul{
+    padding-left: 6rem;
+}
 }
 @media screen and (max-width:450px) {
     .Language-bar-cont-par{
@@ -861,6 +870,15 @@ top: calc(50% - .4rem);
     }
     .language-arrow{
         top: .1rem;
+    }
+    .circle-list-ul-all li{
+        font-size: 1.3rem;
+    }
+    .circle-list-ul-one-open li, .circle-list-ul-one-close li {
+        font-size: .8rem;
+    }
+    .circle-list-ul{
+        padding-left: 4rem;
     }
 }
 

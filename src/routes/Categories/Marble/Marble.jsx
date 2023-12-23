@@ -1,11 +1,18 @@
 import React from 'react'
-import "../../Categories.css"
+import MainBranch from '../../../Sources/MainBranch'
+import {MarbleData} from '../../../Data/ProjectsData'
 
 const Marble = () => {
+  const branchPage = MarbleData.mainData.map(catPage => {
+    return <MainBranch
+    key={catPage.id}
+    {...catPage}
+    />
+})
   return (
-    <div className='str-page'>
-      <h1>MARBLE PAGE UNDER DESIGNING !!</h1>
-    </div>
+  <>
+    {branchPage}
+  </>
   )
 }
 

@@ -1,11 +1,18 @@
 import React from 'react'
-import '../../Categories.css'
+import MainBranch from '../../../Sources/MainBranch'
+import {DoorsData} from '../../../Data/ProjectsData'
 
 const Doors = () => {
+  const branchPage = DoorsData.mainData.map(catPage => {
+    return <MainBranch
+    key={catPage.id}
+    {...catPage}
+    />
+})
   return (
-    <div className='str-page'>
-      <h1>DOORS PAGE UNDER DESIGNING !!</h1>
-    </div>
+  <>
+    {branchPage}
+  </>
   )
 }
 
